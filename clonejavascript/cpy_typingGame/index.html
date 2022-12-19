@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Game</title>
+  <link rel="stylesheet" href="css/style.css"> <!-- link를 통해서 css파일과 연결 시킨다. -->
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script><!-- axios를 사용하는 방법 중 직접 스크립트롤 통해서 불러오는 것 -->
+</head>
+<body>
+  <div class = "header">
+    <h1>타이핑마스터!</h1>
+  </div>
+
+  <div class="word-display"> 
+    Hello
+  </div>
+
+  <div class="word-input-box">
+    <input type="text" class="word-input"/>  
+  </div>
+
+  <div class="gmae-info">
+
+    <div>
+      남은시간 : <span class = "time">0</span>초
+    </div>
+
+    <div>
+      획득점수 : <span class = "score">0</span>점
+    </div>
+
+  </div>
+
+<!-- button과 loading은 클래스가 두개인 것이다. -->
+<!-- onclick은 버튼을 눌렀을 때 해당 이밴트 함수가 발생되게 하는 것이다. -->
+  <button class="button loading" onclick="run()">
+    게임을 불러오는 중..
+  </button>
+
+
+  <!-- <script>를 통해서 js의 내용을 불러온다. -->
+  <script src="js/main.js"/>
+
+
+</body>
+</html>
