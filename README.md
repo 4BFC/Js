@@ -12,7 +12,8 @@
     </li>
     <ul>
      <li>mini
-      <lo>
+      <br>
+      <ol>
        <li>DuckGame</li>
       </ol>
      </li>
