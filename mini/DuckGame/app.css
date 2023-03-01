@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.mouse {
+  /* background-color: black; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 2px solid black;
+  transform: translate(-50%, -50%);
+}
+
+.row {
+  position: relative;
+  width: 200px;
+  top: 50px;
+  right: 50px;
+  border: 1px solid black;
+}
+
+.col {
+  position: relative;
+  height: 200px;
+  width: 0;
+  right: -50px;
+  top: -50px;
+  border: 1px solid black;
+}
