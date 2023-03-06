@@ -6,6 +6,7 @@ const price = document.querySelector("#price");
 
 const power = document.querySelector("#power"); let POW = 10;
 const hp = document.querySelector("#hp"); let HP = 100;
+const work = document.querySelector("#work"); let WORK = 1;
 let PRICE = 0;//STORE의 값을 retun 받기 하기위한 price
 let itemdice = 0;
 
@@ -34,11 +35,11 @@ function store(_dice_) {
         break;
       case 1:
         price.innerText = `가격 : ${PRICE}c`; item.innerText = "아이템 : 도끼(M+5)";
-        console.log(`${itemdice}: ${PRICE}c-->도끼(M+5)`);
+        console.log(`${itemdice}: ${PRICE}c-->도끼(W+5)`);
         break;
       case 2:
         price.innerText = `가격 : ${PRICE}c`; item.innerText = "아이템 : 삽(M+3)";
-        console.log(`${itemdice}: ${PRICE}c-->삽(M+3)`);
+        console.log(`${itemdice}: ${PRICE}c-->삽(W+3)`);
         break;
       case 3:
         price.innerText = `가격 : ${PRICE}c`; item.innerText = "아이템 : 빵(HP+3)";
@@ -81,6 +82,18 @@ function store(_dice_) {
 function getStore(myMoney) {
   myMoney -= PRICE;
   switch (itemdice) {
+    case 0:
+      price.innerText = `가격 : 0c`; item.innerText = "BOOM!!";
+      console.log(`${itemdice}: 0c-->꽝`);
+      break;
+    case 1:
+      WORK += 5;
+      work.innerText = `노동력 : ${WORK}`;
+      break;
+    case 2:
+      WORK += 3;
+      work.innerText = `노동력 : ${WORK}`;
+      break;
     case 3:
       HP += 3;
       hp.innerText = `HP : ${HP}`;
@@ -114,4 +127,9 @@ function getStore(myMoney) {
   return myMoney;
 }
 
-export { dicePlay, store, getStore };
+function getWork() {//노동하기 버튼 함수
+  WORK;
+  return WORK;
+}
+
+export { dicePlay, store, getStore, getWork };

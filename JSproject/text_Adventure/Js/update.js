@@ -5,7 +5,7 @@ const day = document.querySelector("#day");
 const time = document.querySelector("#time");
 
 //시나리오
-const story = document.querySelector("#story"); //스토리 내용 기입
+const WorkTm = document.querySelector("#WorkTm"); //스토리 내용 기입
 const quest = document.querySelector("#quest"); //퀘스트 내용 기입
 
 //버튼
@@ -17,11 +17,13 @@ const buy = document.querySelector("#buy");
 
 //상황조건
 const money = document.querySelector("#money");
+let MONEY = 0;
 let myMoney = 10;
 
 //------------------------------------------------------------------------function.js
 import { dicePlay } from "./function.js";
 import { getStore } from "./function.js";
+import { getWork } from "./function.js";
 
 //dice
 const dice = document.querySelector("#dice");
@@ -92,16 +94,23 @@ function update() {
 
   //시간 조건 노동
   if (!((daycount % 2) > 0)) {
-    story.innerText = "노동하기"; //수락이나 버튼을 눌렀을 때 반응해서 money가 올라가게 만들기 이후에 액션들이 추가될 것
+    WorkTm.innerText = "노동하기"; //수락이나 버튼을 눌렀을 때 반응해서 money가 올라가게 만들기 이후에 액션들이 추가될 것
 
     //노동-button
     const btn = document.createElement("button");
     btn.innerText = "수락";
-    story.appendChild(btn);
-    btn.addEventListener("click", () => { myMoney += 1; money.innerText = `Money : ${myMoney}c`; })// mkmoney = 
+    WorkTm.appendChild(btn);
+    //btn이 부분이.. 많이 어색해졌다. 돈을 function 여기에 넣지 않고 하는 방법..을 고안...
+    //BANK라는 스크립트 를 고안...
+    btn.addEventListener("click", () => {
+      MONEY = getWork();
+      myMoney += MONEY;
+      console.log("myMoney" + myMoney);
+      money.innerText = `Money : ${myMoney}c`;
+    })// mkmoney = 
 
   } else if ((daycount % 2) > 0) {
-    story.innerText = "NOT YET!";
+    WorkTm.innerText = "NOT YET!";
     // console.log("NOT YET");
   }
 
