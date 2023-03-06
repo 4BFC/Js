@@ -3,7 +3,11 @@
 //day = 1 작업 생성
 const item = document.querySelector("#item");
 const price = document.querySelector("#price");
-let PRICE = 0;//retun을 하기위한 price
+
+const power = document.querySelector("#power"); let POW = 10;
+const hp = document.querySelector("#hp"); let HP = 100;
+let PRICE = 0;//STORE의 값을 retun 받기 하기위한 price
+let itemdice = 0;
 
 //랜덤으로 주사위 만들기
 //DICE함수
@@ -20,7 +24,7 @@ function store(_dice_) {
   if ((_dice_ % 2) == 0) {
     PRICE = _dice_ * 1.5;
     //새로운 랜덤 숫자 발생
-    let itemdice = Math.floor((Math.random() * 9));
+    itemdice = Math.floor((Math.random() * 9));
     console.log(`${itemdice}-STORE IS OPEN!! COME ON IN!!`)
     //아이템 종류
     switch (itemdice) {
@@ -71,6 +75,43 @@ function store(_dice_) {
     console.log("STORE IS CLOSE..SEE YOU!!");
     //price의 가격을 지울지 고민중
   }
+  return PRICE;
+}//function store(_dice_) {
+
+function getStore(myMoney) {
+  myMoney -= PRICE;
+  switch (itemdice) {
+    case 3:
+      HP += 3;
+      hp.innerText = `HP : ${HP}`;
+      break;
+    case 4:
+      HP += 5;
+      hp.innerText = `HP : ${HP}`;
+      break;
+    case 5:
+      HP += 15;
+      hp.innerText = `HP : ${HP}`;
+      break;
+    case 6:
+      POW += 10;
+      power.innerText = `POW : ${POW}`;
+      break;
+    case 7:
+      POW += 8;
+      power.innerText = `POW : ${POW}`;
+      break;
+    case 8:
+      price.innerText = `가격 : ${PRICE}c`; item.innerText = "아이템 : 독(Poison_False)";
+      console.log(`${itemdice}: ${PRICE}c-->독(Poison_False)`);
+      break;
+    case 9:
+      price.innerText = `가격 : ${PRICE}c`; item.innerText = "아이템 : 부적(Stamina)";
+      console.log(`${itemdice}: ${PRICE}c-->부적(Stamina)`);
+      break;
+  }
+
+  return myMoney;
 }
 
-export { dicePlay };
+export { dicePlay, store, getStore };

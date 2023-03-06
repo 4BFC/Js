@@ -21,7 +21,7 @@ let myMoney = 10;
 
 //------------------------------------------------------------------------function.js
 import { dicePlay } from "./function.js";
-//import { store } from "./function.js";
+import { getStore } from "./function.js";
 
 //dice
 const dice = document.querySelector("#dice");
@@ -29,7 +29,9 @@ const dic_btn = document.querySelector("#dic_btn");
 let PRICE = 0;
 //콜백함수에 주의
 dic_btn.addEventListener("click", () => {
-  PRICE = dicePlay(dice);
+  PRICE = dicePlay(dice);//여기가 조금 어색하다...
+  //PRICE의 dicePlay는 
+  //dicePlay(dice);
   myMoney -= 1;
   money.innerText = `Money : ${myMoney}c`;
   console.log(myMoney);
@@ -38,21 +40,35 @@ dic_btn.addEventListener("click", () => {
     myMoney = 0;
     money.innerText = `Money : ${myMoney}c`;
     console.log(myMoney);
-    console.log("더 이상 불가능");
+    const buyMsg = document.querySelector("#buyMsg");
+    buyMsg.innerText = "주사위 더 이상 불가능";
+    // console.log("더 이상 불가능");
   }
-});
-//------------------------------------------------------------------------function.js
+}
+);
+
+
 
 //구매버튼
 function buyBtn() {
+  const buyMsg = document.querySelector("#buyMsg");
+  console.log(`click ${PRICE} ${myMoney}`);
   if (!(myMoney < PRICE)) {
-    myMoney -= PRICE; console.log(`myMoney: ${myMoney}`);
+    getStore(myMoney);
+    myMoney -= PRICE;
+    // console.log(`myMoney: ${myMoney}`);
     money.innerText = `Money : ${myMoney}c`;
+    buyMsg.innerText = "-";
   } else {
-    console.log("구매불가");
+    buyMsg.innerText = "구매불가";
+    // console.log("구매불가");
   }
+  // money.innerText = `Money : ${myMoney}c`;
 }
 buy.addEventListener("click", buyBtn);
+
+
+//------------------------------------------------------------------------function.js
 
 //------------------------------> update()
 let daycount = 1;
@@ -81,15 +97,15 @@ function update() {
     //노동-button
     const btn = document.createElement("button");
     btn.innerText = "수락";
-    //story.appendChild(btn);
+    story.appendChild(btn);
     btn.addEventListener("click", () => { myMoney += 1; money.innerText = `Money : ${myMoney}c`; })// mkmoney = 
 
   } else if ((daycount % 2) > 0) {
     story.innerText = "NOT YET!";
-    console.log("NOT YET");
+    // console.log("NOT YET");
   }
 
-  console.log(`${daycount},${daycount % 2}`);
+  // console.log(`${daycount},${daycount % 2}`);
 }//------------------------------> update()
 
 
