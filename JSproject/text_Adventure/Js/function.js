@@ -127,8 +127,9 @@ function getStore(myMoney) {
   return myMoney;
 }
 
-function getWork() {//노동하기 버튼 함수
+function getWork(money, myMoney) {//노동하기 버튼 함수
   WORK;
+  money.innerText = `Money : ${myMoney}c`;
   return WORK;
 }
 

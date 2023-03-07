@@ -96,18 +96,16 @@ function update() {
   if (!((daycount % 2) > 0)) {
     WorkTm.innerText = "노동하기"; //수락이나 버튼을 눌렀을 때 반응해서 money가 올라가게 만들기 이후에 액션들이 추가될 것
 
-    //노동-button
+    //노동-button 생성
     const btn = document.createElement("button");
     btn.innerText = "수락";
     WorkTm.appendChild(btn);
     //btn이 부분이.. 많이 어색해졌다. 돈을 function 여기에 넣지 않고 하는 방법..을 고안...
     //BANK라는 스크립트 를 고안...
     btn.addEventListener("click", () => {
-      MONEY = getWork();
-      myMoney += MONEY;
+      myMoney += getWork(money, myMoney);// MONEY;
       console.log("myMoney" + myMoney);
-      money.innerText = `Money : ${myMoney}c`;
-    })// mkmoney = 
+    });// mkmoney = 
 
   } else if ((daycount % 2) > 0) {
     WorkTm.innerText = "NOT YET!";
