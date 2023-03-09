@@ -7,7 +7,7 @@ const price = document.querySelector("#price");
 const power = document.querySelector("#power"); let POW = 10;
 const hp = document.querySelector("#hp"); let HP = 100;
 const work = document.querySelector("#work"); let WORK = 1;
-let PRICE = 0;//STORE의 값을 retun 받기 하기위한 price
+let PRICE = 0;//STORE의 값을 return 받기 하기위한 price
 let itemdice = 0;
 
 //랜덤으로 주사위 만들기
@@ -19,11 +19,11 @@ function dicePlay(dice) {
   store(DICE);
   return (PRICE);
 }
-
 //STORE함수
 function store(_dice_) {
   if ((_dice_ % 2) == 0) {
-    PRICE = _dice_ * 1.5;
+    PRICE = _dice_ * 1.5; //상품 가격 정하는 식
+
     //새로운 랜덤 숫자 발생
     itemdice = Math.floor((Math.random() * 9));
     console.log(`${itemdice}-STORE IS OPEN!! COME ON IN!!`)
@@ -34,11 +34,11 @@ function store(_dice_) {
         console.log(`${itemdice}: 0c-->꽝`);
         break;
       case 1:
-        price.innerText = `가격 : ${PRICE}c`; item.innerText = "아이템 : 도끼(M+5)";
+        price.innerText = `가격 : ${PRICE}c`; item.innerText = "아이템 : 도끼(W+5)";
         console.log(`${itemdice}: ${PRICE}c-->도끼(W+5)`);
         break;
       case 2:
-        price.innerText = `가격 : ${PRICE}c`; item.innerText = "아이템 : 삽(M+3)";
+        price.innerText = `가격 : ${PRICE}c`; item.innerText = "아이템 : 삽(W+3)";
         console.log(`${itemdice}: ${PRICE}c-->삽(W+3)`);
         break;
       case 3:
@@ -74,6 +74,8 @@ function store(_dice_) {
   else {
     price.innerText = "CLOSE"; item.innerText = "CLOSE";
     console.log("STORE IS CLOSE..SEE YOU!!");
+    // const buy = document.querySelector("#buy");
+    // buy.disabled = true;
     //price의 가격을 지울지 고민중
   }
   return PRICE;
