@@ -17,6 +17,7 @@ const buy = document.querySelector("#buy");
 
 //상황조건
 const money = document.querySelector("#money");
+buy.disabled = true;
 // let MONEY = 0;
 let myMoney = 10;
 

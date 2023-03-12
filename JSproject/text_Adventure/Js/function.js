@@ -74,8 +74,9 @@ function store(_dice_) {
   else {
     price.innerText = "CLOSE"; item.innerText = "CLOSE";
     console.log("STORE IS CLOSE..SEE YOU!!");
-    // const buy = document.querySelector("#buy");
-    // buy.disabled = true;
+    //여기서 buy를 어떻게 하면.. update에서 활성화가 가능할까?
+    const buy = document.querySelector("#buy");
+    buy.disabled = true;
     //price의 가격을 지울지 고민중
   }
   return PRICE;
