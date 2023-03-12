@@ -6,7 +6,8 @@ const price = document.querySelector("#price");
 
 const power = document.querySelector("#power"); let POW = 10;
 const hp = document.querySelector("#hp"); let HP = 100;
-const work = document.querySelector("#work"); let WORK = 1;
+const work = document.querySelector("#work");
+let WORK = 1;
 let PRICE = 0;//STORE의 값을 return 받기 하기위한 price
 let itemdice = 0;
 
@@ -130,10 +131,13 @@ function getStore(myMoney) {
   return myMoney;
 }
 
-function getWork(money, myMoney) {//노동하기 버튼 함수
+function getWork() {//노동하기 버튼 함수
   WORK;
-  money.innerText = `Money : ${myMoney}c`;
   return WORK;
+}
+
+function setWork(setWORK) {
+  WORK = setWORK;
 }
 
 export { dicePlay, store, getStore, getWork };
