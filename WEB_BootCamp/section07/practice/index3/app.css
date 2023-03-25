@@ -1,0 +1,55 @@
+.square {
+  background-color: red;
+}
+
+.square:nth-of-type(2) {
+  background-color: black;
+}
+
+.square:nth-of-type(4) {
+  background-color: black;
+}
+
+.square:nth-of-type(6) {
+  background-color: black;
+}
+
+.square:nth-of-type(8) {
+  background-color: black;
+}
+
+.square:nth-of-type(10) {
+  background-color: black;
+}
+
+.square:nth-of-type(12) {
+  background-color: black;
+}
+
+.square:nth-of-type(14) {
+  background-color: black;
+}
+
+.square:nth-of-type(16) {
+  background-color: black;
+}
+
+.square:nth-of-type(18) {
+  background-color: black;
+}
+
+.square:nth-of-type(4*5) {
+  background-color: black;
+}
+
+.square:nth-of-type(20) {
+  background-color: black;
+}
+
+.square:nth-of-type(22) {
+  background-color: black;
+}
+
+.square:nth-of-type(24) {
+  background-color: black;
+}
