@@ -15,6 +15,7 @@
       <br>
       <ol>
        <li>DuckGame</li>
+       <li>CheckMylist<li>
       </ol>
      </li>
     </ul>
