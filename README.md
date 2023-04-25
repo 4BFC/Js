@@ -19,9 +19,10 @@
        <li>CheckMylist<li>
       </ol>
      </li>
-     <li>TheWebBootCamp23</li>
-     <ol style='color : #006d77'>~ing</ol>
     </ul>
+    <li>TheWebBootCamp23
+     <ol style='color : #006d77'>~ing</ol>
+     </li>
    </ul>
 </div>
 </body>
