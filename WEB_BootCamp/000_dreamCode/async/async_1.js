@@ -1,12 +1,12 @@
 console.log("async_0");
 //1.async
 //async function
-async function fetchUser() {
-  return 'ellie';
-}
+// async function fetchUser() {
+//   return 'ellie';
+// }
 
-const user = fetchUser();
-user.then(console.log);
+// const user = fetchUser();
+// user.then(console.log);
 // console.log(user);
 
 //2.await
@@ -25,11 +25,11 @@ async function getBanana() {
   return 'Banana';
 }
 
-/*async function pickFruits() {
+/**/async function pickFruits() {
   const apple = await getApple();
   const banana = await getBanana();
   return `${apple} + ${banana}`;
-}*/
+}
 //여기서는 apple 1초 + banana 1초 해서 2초 이지만 아래는 1초만에 생성이된다.
 
 /*async function pickFruits() {
@@ -39,17 +39,17 @@ async function getBanana() {
   const banana = await bananaPromise;
   return `${apple} + ${banana}`;
 }*/
-//pickFruits().then(console.log);
+pickFruits().then(console.log);
 
 //3.useful Promise APIs
-function pickAllFruits() {
-  return Promise.all([getApple(), getBanana()])
-    .then(fruits => fruits.join(' + '));
-}
+// function pickAllFruits() {
+//   return Promise.all([getApple(), getBanana()])
+//     .then(fruits => fruits.join(' + '));
+// }
 
-pickAllFruits().then(console.log);
+// pickAllFruits().then(console.log);
 
-function pickOnlyOne() {
-  return Promise.race([getApple(), getBanana()]);
-}
-pickOnlyOne().then(console.log);
+// function pickOnlyOne() {
+//   return Promise.race([getApple(), getBanana()]);
+// }
+// pickOnlyOne().then(console.log);
