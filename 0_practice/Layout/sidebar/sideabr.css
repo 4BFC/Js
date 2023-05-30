@@ -1,0 +1,21 @@
+/* i {
+  margin-left: 15px;
+} */
+
+/* .sidebar-head {
+  color: aliceblue;
+} */
+
+.sidebar {
+  /* width: 15%; */
+  display: table-cell;
+  background-color: cadetblue;
+  /* vertical-align: top; */
+  min-width: 250px;
+  /* margin-left: 20px; */
+}
+
+.main {
+  display: table-cell;
+  width: 85%;
+}

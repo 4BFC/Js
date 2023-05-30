@@ -1,0 +1,28 @@
+body {
+  margin-left: 38%;
+  margin-right: 62%;
+  margin-top: 14%;
+  /* margin-bottom: 60%; */
+  width: 200px;
+  height: 200px;
+  border: 10px solid pink;
+  /* margin: 100px; */
+  padding: 100px;
+}
+
+div {
+  display: block;
+  width: 100px;
+  height: 100px;
+
+  border: 10px solid black;
+  /* padding: 30%; */
+  /* margin: 30%; */
+
+  background-color: aquamarine;
+
+
+  /* background-clip: content-box;
+  background-clip: border-box;
+  background-clip: padding-box; */
+}
