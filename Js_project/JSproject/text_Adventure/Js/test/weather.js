@@ -15,6 +15,7 @@ function onGeoOk(position) {
       // weatherIcon.src = `./img/weather/${data.weather[0].main}.png`
       city.innerText = data.name;
       weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+      console.log(data.weather[0].main);
     });
 }
 
@@ -23,4 +24,3 @@ function onGeoError() {
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
-//

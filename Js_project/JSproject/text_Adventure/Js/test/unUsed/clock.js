@@ -25,18 +25,18 @@ function update() {
   clock.innerText = `${hours}:${minutes}:${seconds}`;
   time.innerText = `Time : ${seconds}`;
 
-  if (seconds === "00") {//===는 타입까지 맞아야한다.
-    console.log("quest!!");
-    daycount += 1;
-    day.innerText = `Day : ${daycount}`;
-  }
+  // if (seconds === "00") {//===는 타입까지 맞아야한다.
+  //   console.log("quest!!");
+  //   daycount += 1;
+  //   day.innerText = `Day : ${daycount}`;
+  // }
 
-  if ((daycount % 2) === 0) {
-    story.innerText = "노동하기";
-  } else if (!(daycount % 2) === 0) {
-    story.innerText = "NOT YET!";
-    console.log("NOT YET");
-  }
+  // if ((daycount % 2) === 0) {
+  //   story.innerText = "노동하기";
+  // } else if (!(daycount % 2) === 0) {
+  //   story.innerText = "NOT YET!";
+  //   console.log("NOT YET");
+  // }
 
 }
 
