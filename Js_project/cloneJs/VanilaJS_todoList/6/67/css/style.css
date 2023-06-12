@@ -1,0 +1,14 @@
+.hidden{
+  display: none;
+}
+
+#myText0{
+  color: blue;
+  font-style: italic;
+  font-size: 10px;
+}
+
+h3{
+  color: deepskyblue;
+  font-style: oblique;
+}

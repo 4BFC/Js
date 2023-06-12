@@ -1,0 +1,138 @@
+.hidden {
+  display: none;
+}
+
+#myText0 {
+  color: blue;
+  font-style: italic;
+  font-size: 10px;
+}
+
+#login-form,
+#todo-form,
+#clock,
+#weather {
+  opacity: 80%;
+  text-align: center;
+}
+
+#todo-list,
+#todo-form,
+#weather {
+  text-align: center;
+  color: azure;
+  list-style: none;
+  padding-left: 0px;
+}
+
+#weatherImg {
+  display: flex;
+  position: relative;
+  top: 50px;
+  z-index: 3;
+  opacity: 50%;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+}
+
+#name {
+  border: none;
+  color: gray;
+  background-color: antiquewhite;
+}
+
+#toDobtn {
+  border: none;
+  background-color: antiquewhite;
+  opacity: 70%;
+  color: orangered;
+}
+
+#clock {
+  /* position: absolute; */
+  text-shadow: 3px 4px 5px grey;
+  text-align: center;
+  font-size: 500%;
+  color: rgb(255, 255, 255);
+  opacity: 80%;
+}
+
+#greeting {
+  text-align: center;
+  color: azure;
+}
+
+#todo-form {
+  text-align: center;
+  color: azure;
+}
+
+#quote {
+  text-shadow: 3px 3px 3px rgb(87, 87, 87);
+  text-align: center;
+  color: azure;
+}
+
+#weather {
+  text-shadow: 3px 3px 3px rgb(87, 87, 87);
+}
+
+#reset {
+  /* background-color:antiquewhite; */
+  opacity: 80%;
+  font-size: 10px;
+  text-align: center;
+  border: none;
+  /* border-radius: 100%; */
+
+  padding: 10px;
+
+  position: absolute;
+  top: 50px;
+  right: 50px;
+
+}
+
+.reset {
+  background-color: antiquewhite;
+  border-radius: 20%;
+}
+
+.reset:hover {
+  background-color: beige;
+  opacity: 10%;
+  border-radius: 80%;
+}
+
+/* 
+body{
+  height: 100vh;
+  background: img;
+  background-size: cover;
+} */
+
+/* 
+해결방법은 찾았으나 정확히 왜 이렇게 되는지 아직 모름
+위의 body css를 적용하면 하단이 올라오는데 왜그러는진 추측만 있고 정확하지 않음 
+*/
+
+img {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: -1;
+  opacity: 100%;
+}
+
+/* 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+} */
+/* https://www.freecodecamp.org/korean/news/how-to-center-an-image-in-css/ */
