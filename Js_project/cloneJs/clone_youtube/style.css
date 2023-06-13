@@ -78,7 +78,7 @@ header .icons .fa-search {
   max-width: 1000px;
 }
 
-.info {
+body>.info {
   padding: var(--padding);
 }
 
@@ -143,6 +143,7 @@ header .icons .fa-search {
 .info .channel {
   display: flex;
   justify-content: space-between;
+  /* border_line */
   border-top: 1px solid var(--grey-dark-color);
   border-bottom: 1px solid var(--grey-dark-color);
 }
@@ -176,4 +177,65 @@ header .icons .fa-search {
   text-transform: uppercase;
   color: var(--red-color);
   font-size: var(--font-medium);
+}
+
+.upNext {
+  padding: 0 var(--padding);
+}
+
+.upNext>.title {
+  font-size: var(--font-medium);
+  color: var(--grey-dark-color);
+  margin-bottom: calc(var(--padding)/2);
+}
+
+.upNext .item {
+  display: flex;
+  margin-top: var(--padding);
+}
+
+.upNext .item .img {
+  flex: 1 1 35%;
+  margin-right: var(--padding);
+}
+
+.upNext .item .img img {
+  flex: 1 1 35%;
+  width: 100%;
+
+}
+
+.upNext .item .info {
+  flex: 1 1 60%;
+}
+
+.upNext .item .moreBtn {
+  flex: 1 1 100%;
+}
+
+.upNext .item .info {
+  display: flex;
+  flex-direction: column;
+}
+
+.upNext .item .info .title {
+  font-size: var(--font-small);
+}
+
+.upNext .item .info .name,
+.upNext .item .info .views {
+  font-size: var(--font-micro);
+  color: var(--grey-dark-color);
+}
+
+.infoupnext {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width : 768px) {
+  .infoupnext {
+    flex-direction: row;
+    margin: var(--padding) 0;
+  }
 }
