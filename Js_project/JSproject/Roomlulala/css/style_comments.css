@@ -1,0 +1,67 @@
+:root {
+  --nav-color: #90E0EF;
+  --gray-color: #D9D9D9;
+  --point-color: #9381FF;
+  --white-color: #edf6f9;
+  --blue-color: #CAF0F8;
+
+  --padding: ;
+
+  --radius-small: 50px;
+  --radius-medium: 30px;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+ul {
+  list-style: none;
+}
+
+/* basic css */
+
+.comments {
+  display: flex;
+  justify-content: center;
+}
+
+.comments .list {
+  display: flex;
+  justify-content: center;
+}
+
+/* backgroundcolor */
+.comments .backColor_list {
+  width: 1158px;
+  height: 623px;
+  border-radius: var(--radius-medium);
+  background: var(--blue-color);
+}
+
+.comments .backColor_list .backColor_element {
+  width: 1033px;
+  height: 124px;
+  border-radius: var(--radius-medium);
+  background: var(--white-color);
+}
+
+.user_img {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-small);
+}
+
+.comments .list .list_element {
+  display: flex;
+  justify-content: column;
+}
+
+.comments .list .list_element .comment span {
+  display: flex;
+  justify-content: column;
+}

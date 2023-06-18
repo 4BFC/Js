@@ -99,7 +99,6 @@ header {
 .input_comment .backColor_input .input_text {
   display: flex;
   flex-direction: column;
-  /* 이부분은 기록할 것 */
 }
 
 .input_comment .backColor_input .input {
@@ -127,7 +126,7 @@ header {
 }
 
 /* 댓글 목록 -> 다시 수정해보기*/
-.comments {
+/* .comments {
   display: flex;
   justify-content: center;
 }
@@ -137,7 +136,6 @@ header {
   height: 623px;
   border-radius: var(--radius-medium);
   background: var(--blue-color);
-  /* flex-direction: column; */
 }
 
 .comment ul {
@@ -161,6 +159,6 @@ header {
 .comments .list li .comment {
   display: flex;
   flex-direction: column;
-  /* -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2; */
 }
+
+*/
