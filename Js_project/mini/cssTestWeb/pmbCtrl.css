@@ -1,0 +1,107 @@
+.container {
+  display: flex;
+  justify-content: left;
+  margin: 10px;
+}
+
+.container .ctrl_box {
+  margin: 40px;
+}
+
+.container .ctrl_box .padding {
+  width: 150px;
+  height: 130px;
+  border-radius: 30px;
+  background: #dad7cd;
+}
+
+.container .ctrl_box .margin {
+  width: 150px;
+  height: 130px;
+  border-radius: 30px;
+  background: #dad7cd;
+}
+
+.container .ctrl_box .border {
+  width: 150px;
+  height: 130px;
+  border-radius: 30px;
+  background: #dad7cd;
+}
+
+.container .ctrl_box .padding h4 {
+  margin: 14px;
+}
+
+.container .ctrl_box .margin h4 {
+  margin: 14px;
+}
+
+.container .ctrl_box .border h4 {
+  margin: 14px;
+}
+
+.container .ctrl_box .padding button {
+  display: flex;
+  justify-content: row;
+}
+
+.container .ctrl_box .margin button {
+  display: flex;
+  justify-content: row;
+}
+
+.container .ctrl_box .border button {
+  display: flex;
+  justify-content: row;
+}
+
+.ctrl_box {
+  margin: 80px;
+}
+
+.Object_bg {
+  margin: 80px;
+  /* margin은 박스 모델 오브젝트의 영역에는 영향이 없으면 사이 간격만 영향을 미친다. */
+  display: flex;
+  justify-content: center;
+
+  /* 중앙정렬필요 */
+  position: relative;
+  align-items: center;
+
+  background-color: #dad7cd;
+  width: 660px;
+  height: 379px;
+
+  border-radius: 20px;
+}
+
+.Object_bg .Object {
+  background-color: #ffc300;
+
+  /* 중앙정렬필요 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -45px 0 0 -145px;
+
+  width: 100px;
+  height: 100px;
+  border-radius: 30px;
+}
+
+.Object_bg .Object2 {
+  background-color: #8338ec;
+
+  /* 중앙정렬필요 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -45px 0 0 45px;
+
+
+  width: 100px;
+  height: 100px;
+  border-radius: 30px;
+}

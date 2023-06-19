@@ -3,3 +3,21 @@
   margin: 0;
   box-sizing: border-box;
 } */
+
+.color_input {
+  border-radius: 30px;
+  border-color: #dad7cd;
+}
+
+.color_Btn {
+  background: antiquewhite;
+  border: none;
+  border-radius: 30px;
+}
+
+.color_object {
+  background: antiquewhite;
+  width: 100px;
+  height: 100px;
+  border-radius: 30px;
+}

@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="color.css">
+  <link rel="stylesheet" href="pmbCtrl.css">
   <link rel="stylesheet" href="style.css">
   <title>css_test</title>
+  <script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -34,38 +36,62 @@
     <div class="color_object"></div>
     <!-- MDN 링크 -->
     <span class="MDN_link">Go to MDN→<a href="https://developer.mozilla.org/ko/docs/Web/CSS">click!!</a></span>
+    <span class="ref_lilnk">Go to ref→<a
+        href="https://velog.io/@woosungkim0123/%EB%B6%84%EA%B8%B0%EC%B2%98%EB%A6%AC-%EA%B8%B0%EB%8A%A5">click!!</a></span>
+
     <style>
-      .color_input {
-        border-radius: 30px;
-        border-color: #dad7cd;
-      }
-
-      .color_Btn {
-        background: antiquewhite;
-        border: none;
-        border-radius: 30px;
-      }
-
-      .color_object {
-        background: antiquewhite;
-        width: 100px;
-        height: 100px;
-        border-radius: 30px;
-      }
+      /* ... */
     </style>
   </section>
   <hr>
+
   <section>
-    <h2>Control padding</h2>
-    <div>
-      <button></button>
-      <button></button>
-      <button></button>
+    <h2>Control padding&margin&border</h2>
+    <div class="container">
+      <div class="ctrl_box">
+        <div class="padding">
+          <h4>padding Button</h4>
+          <div>
+            <button id="padding_plus_Btn">+100px</button>
+            <button id="padding_reset_Btn"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+            <button id="padding_minus_Btn">-100px</button>
+          </div>
+        </div>
+        <div class="margin">
+          <h4>margin Button</h4>
+          <div>
+            <button id="margin_plus_Btn">+100px</button>
+            <button id="margin_reset_Btn"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+            <button id="margin_minus_Btn">-100px</button>
+          </div>
+        </div>
+        <div class="border">
+          <h4>border Button</h4>
+          <div>
+            <button id="border_plus_Btn">+100px</button>
+            <button id="border_reset_Btn"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+            <button id="border_minus_Btn">-100px</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="Object_bg">
+        <div class="Object"></div>
+        <div class="Object2"></div>
+      </div>
+
     </div>
+    <span class="ref_lilnk">Go to ref→<a
+        href="https://www.freecodecamp.org/korean/news/cssro-mueosideun-jungang-jeongryeolhaneun-bangbeob-div-tegseuteu-deung/">click!!</a></span>
   </section>
+
+  <style>
+    /* ... */
+  </style>
 
 </body>
 <script src="./js/color.js"></script>
+<script src="./js/elements.js"></script>
 
 
 </html>
