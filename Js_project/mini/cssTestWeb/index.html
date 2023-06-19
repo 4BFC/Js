@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="color.css">
+  <link rel="stylesheet" href="style.css">
+  <title>css_test</title>
+</head>
+
+<body>
+  <h1>CSS_test</h1>
+  <hr>
+  <!-- <head>
+    <nav>
+      <span>color</span>
+      <span></span>
+      <span></span>
+    </nav>
+  </head> -->
+
+  <section>
+    <h2>Find your Color</h2>
+    <form class="color_form">
+      <!-- input 값 -->
+      <input class="color_input" id="color_input" type="text" placeholder="input color ex.#000fff" value="#">
+      <!-- 버튼 -->
+      <button class="color_Btn" type="submit">input</button>
+    </form>
+
+    <h2 class="txt">What is your color?</h2>
+    <!-- 칼라를 보여주는 패널 -->
+    <div class="color_object"></div>
+    <!-- MDN 링크 -->
+    <span class="MDN_link">Go to MDN→<a href="https://developer.mozilla.org/ko/docs/Web/CSS">click!!</a></span>
+    <style>
+      .color_input {
+        border-radius: 30px;
+        border-color: #dad7cd;
+      }
+
+      .color_Btn {
+        background: antiquewhite;
+        border: none;
+        border-radius: 30px;
+      }
+
+      .color_object {
+        background: antiquewhite;
+        width: 100px;
+        height: 100px;
+        border-radius: 30px;
+      }
+    </style>
+  </section>
+  <hr>
+  <section>
+    <h2>Control padding</h2>
+    <div>
+      <button></button>
+      <button></button>
+      <button></button>
+    </div>
+  </section>
+
+</body>
+<script src="./js/color.js"></script>
+
+
+</html>
