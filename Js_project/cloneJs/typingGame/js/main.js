@@ -31,7 +31,7 @@ const button = document.querySelector('.button');
 
 //       score++;
 //       //여기서 if문이 true가 되면 '획득점수'에 score가 반영이되어야한다.
-      
+
 //       scoreDisplay.innerHTML = score;//wordDisplay.innerHTML = score; 이렇게 사용해도 되는거 아닌가? => 변화는 된다.
 
 //       //정답이 될 경우 초기화가 되게 한다.
@@ -51,9 +51,9 @@ const button = document.querySelector('.button');
 wordInput.addEventListener(
   'input',
 
-  ()=>{
-    
-    if(wordInput.value.toLowerCase() === wordDisplay.innerText.toLowerCase()) {
+  () => {
+
+    if (wordInput.value.toLowerCase() === wordDisplay.innerText.toLowerCase()) {
       score++;
       scoreDisplay.innerHTML = score;
       wordInput.value = "";
@@ -63,26 +63,26 @@ wordInput.addEventListener(
 )//wordInput.addEventListener
 
 //시간 카운트다운하는 함수
-function countDown(){
-   time > 0 ? time-- : isplaying = false;//isplaying은 게임 일시정지와도 같다.
-   //만약에 isplaying이 false이면..
-   if(!isplaying){
-      clearInterval(timeInterval);
-      //clearInterval 함수는 무슨 역할?
-   }
+function countDown() {
+  time > 0 ? time-- : isplaying = false;//isplaying은 게임 일시정지와도 같다.
+  //만약에 isplaying이 false이면..
+  if (!isplaying) {
+    clearInterval(timeInterval);
+    //clearInterval 함수는 무슨 역할?
+  }
   timeDisplay.innerText = time;
 }
 
 //버튼 활성화 기능? -> 정확히 무슨 역할이지?
-function buttonChange(text){
+function buttonChange(text) {
   button.innerText = text;
   text === '게임시작' ? button.classList.remove('loading') : button.classList.add('loading')
 }
 
-function run(){
+function run() {
   isplaying = true;
   time = GAMETIME;
-  timeInterval = setInterval(countDown,1000);
+  timeInterval = setInterval(countDown, 1000);
 }
 
 //1초마다 setInterver안에 들어 있는 함수를 실행시켜주는 함수
