@@ -46,9 +46,9 @@
   justify-content: row;
 }
 
-.container .ctrl_box .margin button {
-  display: flex;
-  justify-content: row;
+.container .ctrl_box .margin div button {
+  /* display: flex; */
+  /* justify-content: center; */
 }
 
 .container .ctrl_box .border button {
@@ -82,24 +82,30 @@
 
   /* 중앙정렬필요 */
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -45px 0 0 -145px;
+  top: 0%;
+  left: 0%;
+  /* margin: -45px 0 0 -145px; */
+  margin: 100px 100px 100px 200px;
+  /* margin은 타의적으로 위치 조정 */
   padding: 0px;
-  border: 0px;
+  /* 글자가 들어가는 컨텐츠 obj는 건들지 않고 주변만 바뀜 */
+  border: solid 0px;
+  /* 태두리 */
+
   width: 100px;
   height: 100px;
+  /* 글자를 담아 낼 수 있는 길이가 바뀜 */
   border-radius: 30px;
 }
 
+/** 중앙정렬필요 */
 .Object_bg .Object2 {
   background-color: #8338ec;
 
-  /* 중앙정렬필요 */
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -45px 0 0 45px;
+  margin: -45px 0 0 -45px;
 
 
   width: 100px;

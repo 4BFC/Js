@@ -22,13 +22,18 @@ console.log(pRb);
 const pMb = getIDelement('padding_minus_Btn');
 // console.log(pMb); pMb.disabled = true;
 
-/** margin_Btn */
-const mPb = getIDelement('margin_plus_Btn');
-console.log(mPb);
-const mRb = getIDelement('margin_reset_Btn');
+/** margin_Btn */ //->수정
+const mRb = getIDelement('margin_R-Btn');
 console.log(mRb);
-const mMb = getIDelement('margin_minus_Btn');
-console.log(mMb); mMb.disabled = true;
+const mLb = getIDelement('margin_L_Btn');
+console.log(mLb);
+const mUb = getIDelement('margin_U_Btn');
+console.log(mUb);
+const mDb = getIDelement('margin_D_Btn');
+console.log(mDb);
+const mResetb = getIDelement('margin_Reset_Btn');
+console.log(mResetb);
+// mMb.disabled = true;
 
 /** border_Btn */
 const bPb = getIDelement('border_plus_Btn');
@@ -67,22 +72,46 @@ getClickEvent(pMb, () => {
 }
 );
 
+
+
+
 /** margin_Click */
-getClickEvent(mPb, () => {
-  console.log('mPb Click!');
-  Object.style.margin += `${10}px`
-}
-);
-getClickEvent(mRb, () => {
-  console.log('mRb Click!');
-  Object.style.margin = `${-45}px`;
-}
-);
-getClickEvent(mMb, () => {
-  console.log('mMb Click!');
-  Object.style.margin = `${-10}px`
-}
-);
+
+//current 변수 - 이중 선언
+// let currentRight = Object.style.marginRight = `${-45}px`
+// let currentBottom = Object.style.marginBottom = `${45}px`
+// let currentLeft = Object.style.marginLeft = `${45}px`
+// let currentTop = Object.style.marginTop = `${-145}px`
+
+//margin 시계방향 위쪽,오른쪽,아래,왼쪽
+const ComputedStyle = window.getComputedStyle(Object);
+console.log(ComputedStyle.margin);
+
+getClickEvent(mRb, () => { console.log('Right_Click!'); });
+getClickEvent(mLb, () => { console.log('Left_Click!'); });
+getClickEvent(mUb, () => { console.log('Up_Click!'); });
+getClickEvent(mDb, () => { console.log('Down_Click!'); });
+getClickEvent(mResetb, () => { console.log('Reset_Click!'); });
+
+// getClickEvent(mPb, () => {
+//   console.log('mPb Click!');
+//   // Object.style.margin += `${10}px`
+//   Object.style.marginTop = `${size += 10}px`
+//   console.log(Object.style.marginTop);
+// }
+// );
+// getClickEvent(mRb, () => {
+//   console.log('mRb Click!');
+//   console.log(ComputedStyle.margin);
+// }
+// );
+// getClickEvent(mMb, () => {
+//   console.log('mMb Click!');
+//   Object.style.marginTop = `${size -= 10}px`
+//   console.log(Object.style.marginTop);
+// }
+// );
+
 
 /** border_Click */
 getClickEvent(bPb, () => {
