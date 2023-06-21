@@ -72,26 +72,58 @@ getClickEvent(pMb, () => {
 }
 );
 
-
-
-
 /** margin_Click */
-
-//current 변수 - 이중 선언
-// let currentRight = Object.style.marginRight = `${-45}px`
-// let currentBottom = Object.style.marginBottom = `${45}px`
-// let currentLeft = Object.style.marginLeft = `${45}px`
-// let currentTop = Object.style.marginTop = `${-145}px`
 
 //margin 시계방향 위쪽,오른쪽,아래,왼쪽
 const ComputedStyle = window.getComputedStyle(Object);
 console.log(ComputedStyle.margin);
+let r_size = 0;
+let l_size = 0;
+let u_size = 0;
+let d_size = 0;
+//current 변수 - 이중 선언 -> 왜 변수로 지정하면 값이 전달되지 않는가?
+//ex) currentRight = `${Margin_size += 10}px`
 
-getClickEvent(mRb, () => { console.log('Right_Click!'); });
-getClickEvent(mLb, () => { console.log('Left_Click!'); });
-getClickEvent(mUb, () => { console.log('Up_Click!'); });
-getClickEvent(mDb, () => { console.log('Down_Click!'); });
-getClickEvent(mResetb, () => { console.log('Reset_Click!'); });
+let currentRight = Object.style.marginRight;
+let currentLeft = Object.style.marginLeft;
+let currentTop = Object.style.marginTop;
+let currentBottom = Object.style.marginBottom;
+
+//window.getComputedStyle로 접근한 margin 값
+let current_Right = ComputedStyle.marginRight;
+let current_Left = ComputedStyle.marginLeft;
+let current_Top = ComputedStyle.marginTop;
+let current_Bottom = ComputedStyle.marginBottom;
+//위 둘의 차이는?
+//나중에 함수 구현으로 셋과 겟을 만들 예정
+
+getClickEvent(mRb, () => {
+  current_Right = Object.style.marginRight = `${r_size += 10}px`
+  console.log(`${current_Right} => Right_Click!`);
+});
+getClickEvent(mLb, () => {
+  current_Left = Object.style.marginLeft = `${l_size += 10}px`
+  console.log(`${current_Left} => Left_Click!`);
+});
+getClickEvent(mUb, () => {
+  current_Top = Object.style.marginTop = `${u_size += 10}px`
+  console.log(`${current_Top} => Up_Click!`);
+});
+getClickEvent(mDb, () => {
+  current_Bottom = Object.style.marginBottom = `${d_size += 10}px`
+  console.log(`${current_Bottom} => Down_Click!`);
+});
+getClickEvent(mResetb, () => {
+  console.log(`Reset_Click!`);
+  current_Right = Object.style.marginRight = `${0}px`;
+  current_Left = Object.style.marginLeft = `${0}px`;
+  current_Top = Object.style.marginTop = `${0}px`;
+  current_Bottom = Object.style.marginBottom = `${0}px`;
+  r_size = 0;
+  l_size = 0;
+  u_size = 0;
+  d_size = 0;
+});
 
 // getClickEvent(mPb, () => {
 //   console.log('mPb Click!');
@@ -111,7 +143,6 @@ getClickEvent(mResetb, () => { console.log('Reset_Click!'); });
 //   console.log(Object.style.marginTop);
 // }
 // );
-
 
 /** border_Click */
 getClickEvent(bPb, () => {

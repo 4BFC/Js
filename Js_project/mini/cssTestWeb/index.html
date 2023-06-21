@@ -60,13 +60,24 @@
 
         <div class="margin">
           <h4>margin Button</h4>
-          <div>
-            <button id="margin_R-Btn">Right</button>
+          <div class="margin_btn">
             <button id="margin_L_Btn">Left</button>
-            <button id="margin_U_Btn">Up</button>
-            <button id="margin_D_Btn">Down</button>
-            <button id="margin_Reset_Btn"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+            <div>
+              <button id="margin_U_Btn">Up</button>
+              <button id="margin_Reset_Btn"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+              <button id="margin_D_Btn">Down</button>
+            </div>
+            <button id="margin_R-Btn">Right</button>
+
           </div>
+
+          <style>
+            .margin_Reset_Btn {
+              /* position: absolute; */
+
+            }
+          </style>
+
         </div>
         <div class="border">
           <h4>border Button</h4>
@@ -79,9 +90,19 @@
       </div>
 
       <div class="Object_bg">
-        <div class="Object">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias iste, vel deleniti non,
-          quisquam, ducimus quas accusamus id soluta beatae necessitatibus ut perferendis dignissimos magnam at magni
-          earum sapiente sit.</div>
+        <!-- <div class="row"> -->
+
+        <div class="Object2"></div>
+        <!-- </div> -->
+        <div>
+          <div class="Object2"></div>
+
+          <div class="Object">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias iste, vel deleniti
+            non,quisquam, ducimus quas accusamus id soluta beatae necessitatibus ut perferendis dignissimos magnam at
+            magniearum sapiente sit.</div>
+
+          <div class="Object2"></div>
+        </div>
         <div class="Object2"></div>
       </div>
 
@@ -92,9 +113,7 @@
     <p>Go to ref→<a href="https://developer.mozilla.org/ko/docs/Web/API/Window/getComputedStyle">click!!</a></p>
   </section>
 
-  <style>
-    /* ... */
-  </style>
+
 
 </body>
 <script src="./js/color.js"></script>

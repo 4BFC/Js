@@ -78,14 +78,58 @@
 }
 
 .Object_bg .Object {
+  display: flex;
   background-color: #ffc300;
 
   /* 중앙정렬필요 */
-  position: absolute;
+  /* position: absolute;
   top: 0%;
-  left: 0%;
+  left: 0%; */
   /* margin: -45px 0 0 -145px; */
-  margin: 100px 100px 100px 200px;
+  margin: 0px 0px 0px 0px;
+  /* margin은 타의적으로 위치 조정 */
+  padding: 0px;
+  /* 글자가 들어가는 컨텐츠 obj는 건들지 않고 주변만 바뀜 */
+  border: solid 0px;
+  /* 태두리 */
+
+  width: 100px;
+  height: 100px;
+  /* 글자를 담아 낼 수 있는 길이가 바뀜 */
+
+  border-radius: 30px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+
+}
+
+/** 중앙정렬필요 */
+.Object_bg .Object2 {
+  display: flex;
+  background-color: #8338ec;
+
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
+  margin: 0px 0px 0px 0px;
+
+
+  width: 100px;
+  height: 100px;
+  border-radius: 30px;
+}
+
+.Object_bg .Object3 {
+  display: flex;
+  background-color: #8338ec;
+
+  position: absolute;
+  top: 40px;
+
+  /* margin: -45px 0 0 -145px; */
+  margin: 0px 0px 0px 0px;
   /* margin은 타의적으로 위치 조정 */
   padding: 0px;
   /* 글자가 들어가는 컨텐츠 obj는 건들지 않고 주변만 바뀜 */
@@ -96,19 +140,46 @@
   height: 100px;
   /* 글자를 담아 낼 수 있는 길이가 바뀜 */
   border-radius: 30px;
+
 }
 
-/** 중앙정렬필요 */
-.Object_bg .Object2 {
+.Object_bg .Object4 {
+  display: flex;
   background-color: #8338ec;
 
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -45px 0 0 -45px;
+  bottom: 40px;
 
+  /* margin: -45px 0 0 -145px; */
+  margin: 0px 0px 0px 0px;
+  /* margin은 타의적으로 위치 조정 */
+  padding: 0px;
+  /* 글자가 들어가는 컨텐츠 obj는 건들지 않고 주변만 바뀜 */
+  border: solid 0px;
+  /* 태두리 */
 
   width: 100px;
   height: 100px;
+  /* 글자를 담아 낼 수 있는 길이가 바뀜 */
   border-radius: 30px;
+
+}
+
+/* margin_btn */
+.margin .margin_btn {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+
+.margin .margin_btn button {
+  display: flex;
+  justify-content: center;
+
+  padding: 3px;
+  margin: 0px;
+
+  width: 42px;
+  height: 27px;
 }
