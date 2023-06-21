@@ -9,8 +9,8 @@
   --margin-medium: 15px;
   --margin-small: 10px;
 
-  --radius-small: 50px;
-  --radius-medium: 30px;
+  --radius-small: 30px;
+  --radius-medium: 10px;
 
 }
 
@@ -34,17 +34,18 @@ header {
 /* 가게명 및 태그 */
 .name {
   display: flex;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 
 .name h2 {
+  font-size: 40px;
   margin-left: 400px;
   margin-bottom: 20px;
 }
 
 .name .tag {
   display: flex;
-  margin-left: 750px;
+  margin-left: 630px;
 }
 
 .name .tag span {
@@ -56,6 +57,7 @@ header {
 .name .tag .tag_level {
   display: flex;
   justify-content: center;
+
   width: 100px;
   height: 40px;
   background: var(--point-color);
@@ -65,6 +67,7 @@ header {
 .name .tag .tag_local {
   display: flex;
   justify-content: center;
+
   width: 70px;
   height: 40px;
   background: var(--point-color);
@@ -110,7 +113,7 @@ header {
 
 .map .backColor_map .map_img {
   width: 1160px;
-  height: 379px;
+  height: 579px;
   border-radius: var(--radius-medium);
 }
 
@@ -218,9 +221,10 @@ header {
 hr {
   margin: 50px;
 } */
+/* 
 .foot_hr {
   margin-top: 50px;
-}
+} */
 
 .img_p {
   display: flex;
@@ -235,5 +239,5 @@ hr {
 footer {
   background: var(--nav-color);
   padding: 50px;
-  margin-top: 10px;
+  margin-top: 150px;
 }

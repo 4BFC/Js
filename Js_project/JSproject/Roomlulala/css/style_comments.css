@@ -7,9 +7,11 @@
 
   --padding: ;
 
+  --radius-small: 30px;
+  --radius-medium: 10px;
+  /* 
   --radius-small: 50px;
-  --radius-medium: 30px;
-
+  --radius-medium: 30px; */
 }
 
 * {
