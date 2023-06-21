@@ -6,6 +6,8 @@
   --blue-color: #CAF0F8;
 
   --padding: ;
+  --margin-medium: 15px;
+  --margin-small: 10px;
 
   --radius-small: 50px;
   --radius-medium: 30px;
@@ -32,7 +34,41 @@ header {
 /* 가게명 및 태그 */
 .name {
   display: flex;
-  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.name h2 {
+  margin-left: 400px;
+  margin-bottom: 20px;
+}
+
+.name .tag {
+  display: flex;
+  margin-left: 750px;
+}
+
+.name .tag span {
+  /* margin-right: 10px; */
+  margin-top: 7px;
+  color: var(--white-color);
+}
+
+.name .tag .tag_level {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+  background: var(--point-color);
+  border-radius: var(--radius-small);
+}
+
+.name .tag .tag_local {
+  display: flex;
+  justify-content: center;
+  width: 70px;
+  height: 40px;
+  background: var(--point-color);
+  border-radius: var(--radius-small);
 }
 
 /* 해당 방탈출 정보 */
@@ -53,6 +89,8 @@ header {
   width: 464px;
   height: 379px;
   border-radius: var(--radius-medium);
+
+  margin: var(--margin-medium);
 }
 
 /* Info : 해당 방탈출 정보 설명 */
@@ -61,6 +99,7 @@ header {
   width: 664px;
   height: 379px;
   border-radius: var(--radius-medium);
+  margin: var(--margin-medium);
 }
 
 /* Map : 해당 방탈출 지도 및 위치 */
@@ -76,9 +115,16 @@ header {
 }
 
 /* 댓글입력 */
+.input_comment .backColor_input {
+  width: 1158px;
+  height: 140px;
+  background: var(--nav-color);
+}
+
 .input_comment {
   display: flex;
   justify-content: center;
+  margin: var(--margin-medium);
 }
 
 .input_comment .backColor_input {
@@ -86,17 +132,27 @@ header {
   /* justify-content: space-evenly; */
   justify-content: center;
   border-radius: var(--radius-medium);
+
 }
+
 
 .input_comment .backColor_input .avator {
   height: 100px;
   width: 100px;
   border-radius: var(--radius-small);
+
+  position: relative;
+  top: 20px;
+  margin-right: 10px;
 }
 
 .input_comment .backColor_input .input_text {
   display: flex;
   flex-direction: column;
+
+  position: relative;
+  top: 15px;
+  margin: 15px;
 }
 
 .input_comment .backColor_input .input {
@@ -110,12 +166,10 @@ header {
   height: 100px;
   border: none;
   border-radius: var(--radius-medium);
-}
 
-.input_comment .backColor_input {
-  width: 1158px;
-  height: 157px;
-  background: var(--nav-color);
+  position: relative;
+  top: 20px;
+  margin: 0px;
 }
 
 /* 왜 아웃라인이 적용이 안될까 */
@@ -160,3 +214,26 @@ header {
 }
 
 */
+/* 
+hr {
+  margin: 50px;
+} */
+.foot_hr {
+  margin-top: 50px;
+}
+
+.img_p {
+  display: flex;
+  justify-content: column;
+
+  width: 100px;
+  height: 60px;
+  background: var(--white-color);
+  margin-bottom: 10px;
+}
+
+footer {
+  background: var(--nav-color);
+  padding: 50px;
+  margin-top: 10px;
+}
