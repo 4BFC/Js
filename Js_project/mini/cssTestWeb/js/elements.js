@@ -10,17 +10,53 @@ function getCLelement(ele_Class) {
 }
 
 /**클릭 이벤트 함수*/
+
+//click
 function getClickEvent(Btn, fn) {
-  return Btn.addEventListener('click', fn)
+  return Btn.addEventListener('click', fn);
 }
+//change
+function getCheckEvent(box, fn) {
+  return box.addEventListener('change', fn);
+}
+
+/**Object -> only use Object, Expect Object2 */
+const Object = getCLelement('Object');
+
+//>-------------------------------------------------------------
 
 /** padding_Btn */
 const pPb = getIDelement('padding_plus_Btn');
-console.log(pPb);
 const pRb = getIDelement('padding_reset_Btn');
-console.log(pRb);
 const pMb = getIDelement('padding_minus_Btn');
-// console.log(pMb); pMb.disabled = true;
+
+let padding_size = 0;
+
+/** padding_Click */
+
+//Event
+getClickEvent(pPb, () => {
+  console.log('pPb Click!')
+  Object.style.padding = `${padding_size += 10}px`;
+}
+);
+getClickEvent(pRb, () => {
+  console.log('pRb Click!')
+  Object.style.padding = `${0}px`
+  padding_size = 0;
+}
+);
+getClickEvent(pMb, () => {
+  console.log('pMb Click!')
+  Object.style.padding = `${padding_size -= 10}px`
+
+  if (0 > padding_size) {
+    padding_size = 0;
+  }
+}
+);
+
+//>-------------------------------------------------------------
 
 /** margin_Btn */ //->수정
 const mRb = getIDelement('margin_R-Btn');
@@ -34,49 +70,13 @@ console.log(mDb);
 const mResetb = getIDelement('margin_Reset_Btn');
 console.log(mResetb);
 // mMb.disabled = true;
-
-/** border_Btn */
-const bPb = getIDelement('border_plus_Btn');
-console.log(bPb);
-const bRb = getIDelement('border_reset_Btn');
-console.log(bRb);
-const bMb = getIDelement('border_minus_Btn');
-console.log(bMb); bMb.disabled = true;
-
-/**Object -> only use Object, Expect Object2 */
-const Object = getCLelement('Object');
-
-let size = 0;
-
-/** padding_Click */
-getClickEvent(pPb, () => {
-  console.log('pPb Click!')
-  Object.style.padding = `${size += 10}px`;
-
-  // let Obj_padding = Object.style.padding;
-  // Obj_padding = Obj_padding + `${10}px`
-}
-);
-getClickEvent(pRb, () => {
-  console.log('pRb Click!')
-  Object.style.padding = `${0}px`
-}
-);
-getClickEvent(pMb, () => {
-  console.log('pMb Click!')
-  Object.style.padding = `${size -= 10}px`
-
-  if (0 > size) {
-    size = 0;
-  }
-}
-);
-
-/** margin_Click */
-
 //margin 시계방향 위쪽,오른쪽,아래,왼쪽
 const ComputedStyle = window.getComputedStyle(Object);
 console.log(ComputedStyle.margin);
+
+/** margin_Click */
+
+//value
 let r_size = 0;
 let l_size = 0;
 let u_size = 0;
@@ -97,6 +97,8 @@ let current_Bottom = ComputedStyle.marginBottom;
 //위 둘의 차이는?
 //나중에 함수 구현으로 셋과 겟을 만들 예정
 
+
+//Event
 getClickEvent(mRb, () => {
   current_Right = Object.style.marginRight = `${r_size += 10}px`
   console.log(`${current_Right} => Right_Click!`);
@@ -125,38 +127,83 @@ getClickEvent(mResetb, () => {
   d_size = 0;
 });
 
-// getClickEvent(mPb, () => {
-//   console.log('mPb Click!');
-//   // Object.style.margin += `${10}px`
-//   Object.style.marginTop = `${size += 10}px`
-//   console.log(Object.style.marginTop);
-// }
-// );
-// getClickEvent(mRb, () => {
-//   console.log('mRb Click!');
-//   console.log(ComputedStyle.margin);
-// }
-// );
-// getClickEvent(mMb, () => {
-//   console.log('mMb Click!');
-//   Object.style.marginTop = `${size -= 10}px`
-//   console.log(Object.style.marginTop);
-// }
-// );
+//>-------------------------------------------------------------
+
+/** border_Btn */
+const s_Check = getIDelement('solid');
+const dot_Check = getIDelement('dotted');
+const dash_Check = getIDelement('dashed');
+const dou_Check = getIDelement('double');
+const gr_Check = getIDelement('groove');
+
+const bPb = getIDelement('border_plus_Btn');
+const bRb = getIDelement('border_reset_Btn');
+const bMb = getIDelement('border_minus_Btn');
 
 /** border_Click */
-getClickEvent(bPb, () => {
-  console.log('bPb Click!');
-  Object.style.border = `${10}px`
+//value
+let border_size = 0;
+let check = '';
+// const box_solid = 'solid';
+// const box_dotted = 'dotted';
+// const box_dashed = 'dashed';
+// const box_double = 'double';
+// const box_groove = 'groove';
+const boxes = ['solid', 'dotted', 'dashed', 'double', 'groove'];
+//나머지 체크박스를 제외하는 함수... 어떻게 만들지? 고민..
+const setClickBtn = (box) => {
+  const checkboxes = document.getElementsByName('checkbox');
+  checkboxes.forEach(element => {
+    element.checked = false;
+  });
+  box.checked = true;
 }
-);
-getClickEvent(bRb, () => {
-  console.log('bRb Click!');
-  Object.style.border = `${0}px`
+
+const clickEvent = (box, box_type) => {
+  console.log(box.checked);
+
+  if (box.checked != false) {
+    console.log("check");
+    Object.style.border = box_type;
+  } else if (box.checked != true) {
+    console.log("uncheck");
+    Object.style.border = '';
+  }
+  check = box_type;
+  console.log(check);
+  setClickBtn(box);
+
+  return check;
 }
-);
-getClickEvent(bMb, () => {
-  console.log('bMb Click!');
-  Object.style.border = `${-10}px`
+
+/**=> solid */
+getClickEvent(s_Check, () => { clickEvent(s_Check, boxes[0]) });
+/**=> dotted */
+getClickEvent(dot_Check, () => { clickEvent(dot_Check, boxes[1]) });
+/**=> dashed */
+getClickEvent(dash_Check, () => { clickEvent(dash_Check, boxes[2]) });
+/**=> double */
+getClickEvent(dou_Check, () => { clickEvent(dou_Check, boxes[3]) });
+/**=> groove */
+getClickEvent(gr_Check, () => { clickEvent(gr_Check, boxes[4]) });
+
+//Event
+
+const resetFn = () => {
+  border_size = 0;
+  Object.style.border = `${border_size}px`;
+};
+
+const mathFn = (math) => {
+  if (check != '') {
+    console.log('bPb Click!');
+    Object.style.border = `${math}px ${check}`;
+  }
+  else {
+    console.log(`unchecked ${check}`);
+  }
 }
-);
+
+getClickEvent(bPb, () => { mathFn(border_size += 5); });
+getClickEvent(bRb, resetFn);
+getClickEvent(bMb, () => { mathFn(border_size -= 5); });

@@ -1,3 +1,9 @@
+:root {
+  --radius-L-size: 30px;
+  --radius-M-size: 20px;
+  --radius-S-size: 10px;
+}
+
 .container {
   display: flex;
   justify-content: left;
@@ -9,25 +15,54 @@
 }
 
 .container .ctrl_box .padding {
-  width: 150px;
+  width: 180px;
   height: 130px;
-  border-radius: 30px;
+  border-radius: var(--radius-L-size);
   background: #dad7cd;
 }
 
 .container .ctrl_box .margin {
-  width: 150px;
+  width: 180px;
   height: 130px;
-  border-radius: 30px;
+  border-radius: var(--radius-L-size);
   background: #dad7cd;
 }
 
 .container .ctrl_box .border {
-  width: 150px;
-  height: 130px;
-  border-radius: 30px;
+  display: flex;
+  justify-content: column;
+}
+
+.container .ctrl_box .border .checkBox {
+  width: 75px;
+  height: 65px;
+  border-radius: var(--radius-S-size);
+  background: #dad7cd;
+
+  padding: 10px 10px 50px 10px;
+  margin-right: 5px;
+}
+
+
+.container .ctrl_box .border .borderBtn {
+  width: 80px;
+  height: 125px;
+  border-radius: var(--radius-S-size);
   background: #dad7cd;
 }
+
+.container .ctrl_box .border .borderBtn .Btnes {
+  margin-top: 25px;
+}
+
+.container .ctrl_box .border .borderBtn .Btnes button {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-left: 17px;
+}
+
+
 
 .container .ctrl_box .padding h4 {
   margin: 14px;
@@ -74,7 +109,7 @@
   width: 660px;
   height: 379px;
 
-  border-radius: 20px;
+  border-radius: var(--radius-M-size);
 }
 
 .Object_bg .Object {
@@ -97,10 +132,7 @@
   height: 100px;
   /* 글자를 담아 낼 수 있는 길이가 바뀜 */
 
-  border-radius: 30px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  border-radius: var(--radius-L-size);
   overflow: hidden;
 
 }
@@ -118,7 +150,7 @@
 
   width: 100px;
   height: 100px;
-  border-radius: 30px;
+  border-radius: var(--radius-L-size);
 }
 
 .Object_bg .Object3 {
@@ -139,7 +171,7 @@
   width: 100px;
   height: 100px;
   /* 글자를 담아 낼 수 있는 길이가 바뀜 */
-  border-radius: 30px;
+  border-radius: var(--radius-L-size);
 
 }
 
@@ -161,7 +193,7 @@
   width: 100px;
   height: 100px;
   /* 글자를 담아 낼 수 있는 길이가 바뀜 */
-  border-radius: 30px;
+  border-radius: var(--radius-L-size);
 
 }
 
