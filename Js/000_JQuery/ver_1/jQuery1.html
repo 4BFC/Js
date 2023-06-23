@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .active {
+      color: white;
+      background-color: red;
+    }
+  </style>
+  <title>install jQuery</title>
+</head>
+
+<body>
+
+  <div id="target">
+    Hello world!
+  </div>
+  <div id="new_target">
+    New Hello!!
+  </div>
+  <script>
+    $('#target, #new_target').html('World Hello').addClass('active').css('border', '1px solid Yellow');
+    // = document.getElementById('target').innerHTML = 'World Hello';
+    // + document.getElementById('target').setAttribute('class', 'active');
+
+  </script>
+</body>
+
+</html>
