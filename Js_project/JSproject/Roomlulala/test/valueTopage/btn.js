@@ -22,5 +22,6 @@ Mbtn.addEventListener('click', () => {
 
 Reset.addEventListener('click', () => {
   window.localStorage.setItem('count', 0);
+  value.innerText = '0';
   // window.localStorage.removeItem('count');
 })

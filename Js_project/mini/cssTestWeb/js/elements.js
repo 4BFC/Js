@@ -60,15 +60,10 @@ getClickEvent(pMb, () => {
 
 /** margin_Btn */ //->수정
 const mRb = getIDelement('margin_R-Btn');
-console.log(mRb);
 const mLb = getIDelement('margin_L_Btn');
-console.log(mLb);
 const mUb = getIDelement('margin_U_Btn');
-console.log(mUb);
 const mDb = getIDelement('margin_D_Btn');
-console.log(mDb);
 const mResetb = getIDelement('margin_Reset_Btn');
-console.log(mResetb);
 // mMb.disabled = true;
 //margin 시계방향 위쪽,오른쪽,아래,왼쪽
 const ComputedStyle = window.getComputedStyle(Object);
