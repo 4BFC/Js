@@ -10,29 +10,7 @@
 
 HTML에선 script태그의 type을 'module'로 지정을 해줘야 한다.
 > type = 'module'은 아래와 같다. ref : index.html
-> > <pre><code>{
-<script type="module" src="./js/ClickBtn.js"></script>
-}</code></pre>
-
-<pre><code>{
-<script type="module" src="./js/create_Box.js"></script>
-}</code></pre>
-
-<pre><code>{
-<script type="module" src="./js/create_Box_value.js"></script>
-}</code></pre>
-
-<pre><code>{
-<script type="module" src="./js/create_Class.js"></script>
-}</code></pre>
-
-<pre><code>{
-<script type="module" src="./js/create_Element.js"></script>
-}</code></pre>
-
-<pre><code>{
-<script type="module" src="./js/project_Mgr.js"></script>
-}</code></pre>
+> > <pre><code>{<script type="module" src="./js/ClickBtn.js"></script>}</code></pre>
 저장 방식은 local storage를 사용했다.
 
 함수의 overload방식을 구현하려고 했으나 미숙한 점이 있어서 아직은 구현하지 않았다.
