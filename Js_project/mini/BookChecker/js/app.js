@@ -19,7 +19,7 @@ function get_create_Element(option) {
 }
 
 //객체 클래스명 생성 및 부모자식 연결 함수
-function get_create_box(class_name, value, element, parent) {
+function get_create_Box_value(class_name, value, element, parent) {
   const element_box = get_create_Element(`${element}`);
   element_box.innerHTML = value;
   // appendChild
@@ -38,16 +38,6 @@ function get_create_Box(class_name, element, parent) {
   return element_box;
 }
 
-function overload(a, b, c) {
-  if (typeof c === 'function') {
-
-  } else if (typeof b === 'function') {
-
-  } else {
-
-  }
-}
-
 //객체 지정 함수를 통한 변수 선언
 const title = get_create_Class('title');
 const comment = get_create_Class('comment');
@@ -60,6 +50,6 @@ get_ClickBtn(input_btn, 'click', () => {
   let parent = get_create_Box('box_backColor', 'div', list);
   // let parent = get_create_Element('div');
   // list.appendChild(parent);
-  get_create_box('title_box', title.value, 'div', parent);
-  get_create_box('comment_box', comment.value, 'div', parent);
+  get_create_Box_value('title_box', title.value, 'div', parent);
+  get_create_Box_value('comment_box', comment.value, 'div', parent);
 })
