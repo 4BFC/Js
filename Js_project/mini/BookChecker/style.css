@@ -2,7 +2,7 @@
   width: 50%;
   height: 3%;
   background: #e63946;
-  border-radius: 3%;
+  border-radius: 10px;
 
   margin-bottom: 3%;
 }
@@ -11,14 +11,14 @@
   width: 50%;
   height: 5%;
   background: #e63946;
-  border-radius: 3%;
+  border-radius: 10px;
 }
 
 .box_backColor {
   width: 20%;
   height: 10%;
   background: bisque;
-  border-radius: 3%;
+  border-radius: 10px;
 
   margin-bottom: 3%;
 }

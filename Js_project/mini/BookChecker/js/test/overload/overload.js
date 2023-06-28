@@ -10,6 +10,7 @@ function overload(a, b, c) {
   }
 }
 
+//여기선 각 매개변수의 변수명이 바뀌어도 무관하다.
 function callback(class_name, value) {
   //b라는 매개변수가 존재할 때 코드가 실행된다.
   if (value) {
@@ -20,6 +21,8 @@ function callback(class_name, value) {
     console.log('매개변수 없음');
   }
 }
+
+//overload
 overload('zero', 'babo', callback); // 문자열 zero babo
 overload({ name: 'zero', value: 'babo' }, callback); // 옵션 객체 { name: 'zero', value: 'babo' }
 overload(callback); // 매개변수 없음

@@ -18,6 +18,12 @@ function get_create_Element(option) {
   return name;
 }
 
+//local_storage set 함수
+function set_local_Storage(key, value) {
+  const name = window.localStorage.setItem(`${key}`, `${value}`)
+  return name;
+}
+
 //객체 클래스명 생성 및 부모자식 연결 함수
 function get_create_Box_value(class_name, value, element, parent) {
   const element_box = get_create_Element(`${element}`);
@@ -26,6 +32,14 @@ function get_create_Box_value(class_name, value, element, parent) {
   parent.appendChild(element_box);
   element_box.className = `${class_name}`;
   console.log(element_box.className);
+
+  //local_Storage key와 value 지정 조건문
+  if (value === title.value) {
+    set_local_Storage(title.value);
+  } else if (value === comment.value) {
+    set_local_Storage(title.value, comment.value);
+  }
+
   return element_box;
 }
 
@@ -39,8 +53,8 @@ function get_create_Box(class_name, element, parent) {
 }
 
 //객체 지정 함수를 통한 변수 선언
-const title = get_create_Class('title');
-const comment = get_create_Class('comment');
+export const title = get_create_Class('title');
+export const comment = get_create_Class('comment');
 const input_btn = get_create_Class('input_btn');
 
 const list = get_create_Class('list');
@@ -52,4 +66,5 @@ get_ClickBtn(input_btn, 'click', () => {
   // list.appendChild(parent);
   get_create_Box_value('title_box', title.value, 'div', parent);
   get_create_Box_value('comment_box', comment.value, 'div', parent);
+  //set_local_Storage(comment_value, title_value);
 })
