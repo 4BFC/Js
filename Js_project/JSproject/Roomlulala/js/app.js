@@ -23,19 +23,21 @@ function get_create_Box(class_name, element, parent) {
       <span>guess9</span>
       <span>2023/08/12</span>
       <span>
-        평일 낮 방문인데도 대기손님이 좀 계셔서 놀랬어요. 친절하게 잘 안내해주셔서 처음부터 끝까지 잘 안내 해주셔서 몰입을 더 잘할 수 있었어요.
+        ${input_comment.value}
       </span>
     </div>
 
   </div>`;
   // appendChild
-  parent.appendChild(element_box);
+  //parent.appendChild(element_box);
+  parent.insertBefore(element_box, parent.firstChild);
   element_box.className = `${class_name}`;
   console.log(element_box.className);
   return element_box;
 }
 
 const button = get_create_Class('user_input');
+const input_comment = get_create_Class('input');
 const parent_element = get_create_Class('user_comment_list');
 
 get_ClickBtn(button, 'click', () => {
