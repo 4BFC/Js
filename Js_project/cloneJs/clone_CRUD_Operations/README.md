@@ -22,5 +22,10 @@ document.querySelector("#student-list").addEventListener("click", (e) => {
 1. 클릭 이벤트 발생시 페이지 전환 되지 않도록 하기 위해     
 2. 최상단으로 이동 목적으로       
 3. href = "#;"은 최상단으로 이동하지 않고 이벤트가 수행하기 위해     
-[reference](https://velog.io/@muchogusto/a-href-%EB%AC%B4%EC%97%87%EC%9D%84-%EC%9D%98%EB%AF%B8)
+[reference about href](https://velog.io/@muchogusto/a-href-%EB%AC%B4%EC%97%87%EC%9D%84-%EC%9D%98%EB%AF%B8)
 > >  (e)=>{}는 무엇이가.      
+> > >    
+1. 이벤트 버블링
+2.
+[What is DOM URL](https://www.codestates.com/blog/content/dom-javascript)     
+[What is Event URL](https://www.zerocho.com/category/JavaScript/post/57432d2aa48729787807c3fc)
