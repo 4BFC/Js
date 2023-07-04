@@ -73,8 +73,8 @@ document.querySelector("#student-list").addEventListener("click", (e) => {//pare
     document.querySelector("#firstName").value = selectedRow.children[0].textContent;
     document.querySelector("#lastName").value = selectedRow.children[1].textContent;
     document.querySelector("#rollNo").value = selectedRow.children[2].textContent;
+
   }
-  // clearFields();
 });
 
 // Delete date
@@ -83,7 +83,10 @@ document.querySelector("#student-list").addEventListener("click", (e) => {
   target = e.target;
   if (target.classList.contains("delete")) {
     target.parentElement.parentElement.remove();//?
+    const name = target.parentElement.parentElement.nodeName;
+    console.log(name);
     showAlert("Student Data Deleted", "danger");//=>Bootstrap
+    clearFields();
   }
-  // clearFields();
+
 });

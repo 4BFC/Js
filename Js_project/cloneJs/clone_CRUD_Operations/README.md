@@ -1,3 +1,4 @@
+> href ="#"는 e.preventDefault()의 역할을 대신한다. 아래 설명을 참고하자.
 * index.html
 ```
 <a href="#" class="btn btn-warning btn-sm edit">Edit</a>
@@ -24,8 +25,29 @@ document.querySelector("#student-list").addEventListener("click", (e) => {
 3. href = "#;"은 최상단으로 이동하지 않고 이벤트가 수행하기 위해     
 [reference about href](https://velog.io/@muchogusto/a-href-%EB%AC%B4%EC%97%87%EC%9D%84-%EC%9D%98%EB%AF%B8)
 > >  (e)=>{}는 무엇이가.      
-> > >    
+> > >    이벤트 객체에는 다양한 속성과 메서드가 있으며, 이를 통해 발생한 이벤트의 세부 정보를 확인하고 처리할 수 있습니다. 직접 event객체 변수를 만들지 않고 함수내에서 해당 객체(class,id)를 통해 찾아내는 것이다.
 1. 이벤트 버블링
-2.
+2. 이벤트 객체(e) 
 [What is DOM URL](https://www.codestates.com/blog/content/dom-javascript)     
 [What is Event URL](https://www.zerocho.com/category/JavaScript/post/57432d2aa48729787807c3fc)
+
+---------------------------------------
+* app.js
+```
+document.querySelector("#student-list").addEventListener("click", (e) => {
+  // e.preventDefault();
+  target = e.target;
+  if (target.classList.contains("delete")) {
+    target.parentElement.parentElement.remove();//?
+    showAlert("Student Data Deleted", "danger");//=>Bootstrap
+    clearFields();
+  }
+
+});
+```
+> 위 코드에서 parentElement의 역할은 무엇인가.
+> > 
+
+---------------------------------------
+> addEventListener("click",fn)과 addEventListener("submit",fn)의 차이
+> > 
