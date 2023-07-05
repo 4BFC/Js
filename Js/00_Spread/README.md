@@ -1,0 +1,11 @@
+# spread
+* code
+```
+const numbers = [1, 2, 3];
+const newNumber = [...numbers, 4];
+```
+
+* console's result
+```
+console.log(newNumber); // 1,2,3,4
+```
