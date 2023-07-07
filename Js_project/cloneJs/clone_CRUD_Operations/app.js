@@ -33,9 +33,9 @@ document.querySelector("#student-form").addEventListener("submit", (e) => {
     showAlert("Please fill in all fields", "danger");
   }
   else {
-    if (selectedRow == null) {//?
+    if (selectedRow == null) {//selectedRow가 특정 값을 지정, 정의되지 않았다면 if문 실행
       const list = document.querySelector("#student-list");
-      const row = document.createElement("tr");//?
+      const row = document.createElement("tr");//부모,그룹
       // clearFields();
       row.innerHTML =
         `<td>${firstName}</td>
@@ -46,14 +46,17 @@ document.querySelector("#student-form").addEventListener("submit", (e) => {
           <a href="#" class="btn btn-danger btn-sm delete">Delete</a>
         </td>
       `;
-      list.appendChild(row);
+      list.appendChild(row);//전체 list에 row(부모 -> group)를 첨부
       selectedRow = null;
       showAlert("Student Added", "success")
     }
-    else {
-      selectedRow.children[0].textContent = firstName;
-      selectedRow.children[1].textContent = lastName;
-      selectedRow.children[2].textContent = rollNo;
+    else {//특정 로우가 지정 되었을 때
+      console.log("edited")
+      selectedRow.children[0].textContent = firstName;  //value
+      console.log(selectedRow.nodeName);
+      console.log(selectedRow.children[0].nodeName)
+      selectedRow.children[1].textContent = lastName;   //value
+      selectedRow.children[2].textContent = rollNo;     //value
       selectedRow = null;
       showAlert("Student Info Edited", "info");
     }
@@ -73,7 +76,6 @@ document.querySelector("#student-list").addEventListener("click", (e) => {//pare
     document.querySelector("#firstName").value = selectedRow.children[0].textContent;
     document.querySelector("#lastName").value = selectedRow.children[1].textContent;
     document.querySelector("#rollNo").value = selectedRow.children[2].textContent;
-
   }
 });
 
