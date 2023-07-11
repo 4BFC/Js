@@ -25,7 +25,7 @@
 
 <br>
 
-저장 방식은 local storage를 사용했다.   
+* 저장 방식은 local storage를 사용했다.   
 > type = local storage 저장 방식은 아래와 같다.    ref : local_Storage.js
 > > 
 ```
@@ -40,7 +40,7 @@ export function set_local_Storage(key, value) {
 함수의 overload방식을 구현하려고 했으나 미숙한 점이 있어서 아직은 구현하지 않았다.   
 <br><br>
 
-* 개발을 하면서 발생한 문제점 
+* ## 개발을 하면서 발생한 문제점 
 1. click함수들이 모두 event를 사용하지 않고 직접 적으로 지정을 한 것      
 ```
 //클릭시 생성 및 함수 선언
@@ -72,7 +72,7 @@ get_ClickBtn(input_btn, 'click', () => {
 > (test/index.html) 1번에서 참고한 코드와 동일하게 'click'만으로 구현을 했다. 이를 보완해야할 필요가 있다.      
 <br>  
 
-*submit을 사용할 때 addEventListener가 submit을 지칭하는 변수에 있어야 한다.      
+* ## submit을 사용할 때 addEventListener가 submit을 지칭하는 변수에 있어야 한다.      
 <br>     
 
 > 잘못된 예시
