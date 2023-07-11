@@ -8,7 +8,7 @@
 <img src="./img/diagram_export.JPG" width="40%" height="30%" title="export_diagram" alt="export_diagram"></img>   
 <br>
 
-* 각 스크립트를 모듈화하기 위해선 import와 export를 해야한다.
+* ## 각 스크립트를 모듈화하기 위해선 import와 export를 해야한다.
 > import는 아래와 같다.       ref : js/create_Element.js
 > > <pre><code>{import { get_create_Element } from './create_Element.js';}</code></pre>  
 
@@ -98,3 +98,6 @@ form_tag.addEventListener('submit', (e)=>{
   //=>event가 발생되고 정상적으로 수행되는 것을 볼 수 있다.
 });
 ```
+<br>
+
+### 함수 생성시 메모리의 할당량은 어떻게 되는가?(변수와의 차이)
