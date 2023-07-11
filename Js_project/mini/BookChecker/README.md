@@ -28,3 +28,32 @@ export function set_local_Storage(key, value) {
 ```   
    
 함수의 overload방식을 구현하려고 했으나 미숙한 점이 있어서 아직은 구현하지 않았다.   
+
+* 개발을 하면서 발생한 문제점 
+1. click함수들이 모두 event를 사용하지 않고 직접 적으로 지정을 한 것      
+```
+//클릭시 생성 및 함수 선언
+get_ClickBtn(input_btn, 'click', () => {
+  let parent = get_create_Box('box_backColor', 'div', list);
+  // let parent = get_create_Element('div');
+  // list.appendChild(parent);
+  get_create_Box_value('title_box', title.value, 'div', parent);
+  get_create_Box_value('comment_box', comment.value, 'div', parent);
+  //set_local_Storage(comment_value, title_value);
+})
+```     
+> (ref : test/app.js) 위 코드를 보면 수 많은 태그들을 직접 지정해야했다. event 매개변수를 사용해서 코드를 수정할 필요가 있다.
+2. form태그를 사용해서 submit과 같은 형식을 구성하지 못한 점     
+```
+<section>
+    <h3>Create New List</h3>
+    <div class="Create_box">
+      Title : <input type="text" class="title">
+      Comment : <input type="text" class="comment">
+      <button class="input_btn">plus</button>
+    </div>
+  </section>
+  <hr>
+  <section>
+```
+> (test/index.html) 1번에서 참고한 코드와 동일하게 'click'만으로 구현을 했다. 이를 보완해야할 필요가 있다.
