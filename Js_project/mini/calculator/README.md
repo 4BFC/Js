@@ -38,7 +38,7 @@ export class Calculator {
 }
 ```
 해당 클래스에서 함수들을 적용하는 방식은 위와 같이 구성하였다. JAVA와 달리 필요 함수를 불러오기 위해서는 import된 함수를 call을 통해서 값을 가져 와야한다.      
-[ref-link]:{https://offbyone.tistory.com/140}   
+[ref-link]:https://offbyone.tistory.com/140     
     
 ## call 함수
 ```
