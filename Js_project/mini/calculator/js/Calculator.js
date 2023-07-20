@@ -6,12 +6,8 @@ import { clear } from "./clear.js";
 
 
 export class Calculator {
-  constructor() {
-    this.result = 0
-    // if (value_1 == null) {
-    //   alert("입력해주세요")
-    // }
-    // else {  = value_1; }
+  constructor(number) {
+    this.result = number;
   }
 
   add(number) {
@@ -32,6 +28,6 @@ export class Calculator {
   };
 
   clear() {
-    clear.call(this, number);
+    clear.call(this);
   };
 }
