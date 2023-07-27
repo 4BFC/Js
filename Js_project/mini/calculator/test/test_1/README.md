@@ -2,6 +2,11 @@
 단순히 함수를 이용하지 않고 class를 이용해서 클래스 내무에 있는 함수에 접근해서 기능을 수행하는 방식으로 제작했다.     
 뿐만아니라 export와 import를 사용해서 한 스크립트에 하나의 함수를 담아 유지 보수가 유용하게 구성하였다.
 
+해당 파일과 구성은 아래와 같다.
+
+### 구성
+<img src="./img/struct.JPG" width="450px" height="300px" title="파일 구성 img" alt=""></img><br/>
+
 > Calculator.js
 ```
 import { add } from "./add.js";
