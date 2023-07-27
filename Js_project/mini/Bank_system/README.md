@@ -17,3 +17,20 @@
    
       
 > 예를 들어서 money라는 값을 지속적으로 get과 set을 통해서 관리가 가능한지 프로그램을 통해서 구축을 해보는 것이다. LocalStorage를 통해서 구축하는 방식과 단순한 변수를 통합적으로 관리하는 Variable_Mgr.js를 통해서 array의 구조를 만들 수 있는 js의 원리를 이해야한다. js의 독특한 array 방식은 기본적으로 우리가 알고 있는 py나 JAVA와는 다른 형태를 띄고 있다. 이의 깊숙한 차이점을 생각하면서 이번 mini project를 통해서 여러 다양한 방식으로 프로그램을 구성하고 제작해본다.
+     
+프로퍼티를 사용해서 get과 set을 제작한다. 하지만 money의 값은 절대적인 값의 유지는 아니다.
+```
+export const My_money = {
+  money: 1000,//여기에서 money의 값이 저장되는 것인가?
+
+  get_money(m) {
+    console.log(m);
+  },
+
+  set_money(m) {
+    My_money.money = m;
+    console.log(`My_money.money : ${My_money.money}/m : ${m}`)
+
+  },
+}
+```
