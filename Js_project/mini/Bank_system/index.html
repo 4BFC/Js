@@ -5,13 +5,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BankSystem</title>
+  <!-- <script src="./js/includeHTML.js"></script> -->
 </head>
 
 <body>
   <h1>BankSystem</h1>
-  <script type="module" src="./app.mjs"></script>
-  <script type="module" src="./money_Mgr.mjs"></script>
-  <!-- <script type="module" src="./variable_Mgr.mjs"></script> -->
+
+  <section class="input_Group" id="input_Group">
+    <object type="text/html" data="./html/input.html"></object>
+  </section>
+
+  <section class="btn_Group" id="btn_Group">
+    <object type="text/html" data="./html/btn.html"></object>
+  </section>
+
+  <script type="module" src="./js/app.js"></script>
+  <script type="module" src="./js/money_Mgr.js"></script>
+  <script type="module" src="./js/variable_Mgr.js"></script>
+  <!-- <script type="module" src="./js/btn_mgr.js"></script> -->
 </body>
+
+<!-- <script>
+  includeHTML();
+</script> -->
+
+<!-- <script type="module" src="./js/show_mgr.js"></script> -->
+
+
 
 </html>

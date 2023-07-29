@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BankSystem</title>
+  <script src="./js/includeHTML.js"></script>
+</head>
+
+<body>
+  <h1>BankSystem</h1>
+  <section class="btn_Group" id="btn_Group">
+    <div include-html="./html/btn.html" />
+  </section>
+
+  <section class="show_Group" id="show_Gruop">
+    <div include-html="./html/show_interface.html" />
+  </section>
+
+</body>
+
+<script>
+  includeHTML();
+</script>
+<script type="module" src="./js/btn_mgr.js"></script>
+<script type="module" src="./js/app.js"></script>
+<script type="module" src="./js/money_Mgr.js"></script>
+<script type="module" src="./js/variable_Mgr.js"></script>
+
+<!-- <script type="module" src="./js/show_mgr.js"></script> -->
+
+
+
+</html>
