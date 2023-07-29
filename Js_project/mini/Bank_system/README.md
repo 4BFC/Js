@@ -118,4 +118,4 @@ function includeHTML(callback) {
 
  >> 특이점 : show_mgr.js를 btn_mgr.js에 import만 해도 console.log()가 반응을 한다.
 
- <!-- >> 특이점 : 각 html스크립트의 값들이 다르게 적용이 된다. JAVA와 같이 값을 유지하지 못하고 import한  -->
+ 
