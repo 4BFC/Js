@@ -90,7 +90,7 @@ function includeHTML(callback) {
 ```
 > include를 사용했을 때는 addEventListener에 null 오류가 지속적으로 발생했다. 뿐만아니라 각 HTML에 사용 할 JS파일들을 index.html파일로 종속시켜야만 했다.
 [LINK] : https://www.w3schools.com/howto/howto_html_include.asp
-   
+  
 * <object data="">를 활용한 분할 시도
 ```
 <body>
@@ -105,17 +105,19 @@ function includeHTML(callback) {
 
 </body>
 ```
+   
 > <object data="">를 사용했을 때는 include.js와는 달리  index.html파일에 모든 파일들을 종속 시키지 않고 각기 해당되는 HTML파일들 속에 js를 종속시켜야만 한다. <object data="">방식이 더욱 유지 관리하기 변한 모습을 하고 있다.
-
+   
 >> 결과적으로 show_mgr.js를 import를 통해서 값을 전달하는 방식으로 하려했으나 값을 전달해오지 못하기에 show_interface.html을 btn.html로 옮기면서 btn_mgr.js파일을 하나로 합쳤다.
-
+   
 > 오류 코드 : btn_mgr.js:11 Uncaught TypeError: Cannot read properties of null (reading 'addEventListener') 
 >해당 오류가 지속적으로 일어난다. 그 이유는 무엇인지 파악을 해야한다. 우선적으론 html을 불러오는 것에 있어서 충돌이 일어나는 것으로 보여진다. 이를 해결하기 위해선 코드와 스크립트의 위치와 연결되어 있는 노드들의 흐름을 정리 해야할 것 같다. 또는 addEventListener를 다른 다른 함수로 발생시키게 하거나 고민 해볼 필요가 있다. Show_mgr의 스크립트 제작 이후로 충돌이 일어나고 있다. 이전의 코드로 돌아가서 정상적으로 작동을 시켜봐야할 필요가 있다.
-
+   
  > 해결 : 우선적으로 index.html을 포함해서 btn.html과 show_interface.html에 모든 js코드들을 script로 입력해 놓았었다 거기에서 부터 HTML스크립트의 충돌문제가 있었던 것이다. 따라서 index.html파일에서만 모든 js파일들을 통합적으로 모아 놓았다. 하지만 문제는 show_interface의 null반환이 문제다.
-
+   
  >> 특이점 : show_interface가 반응할 때는 처음으로 로드할 때 정상적으로 show_interface의 값을 가져온다. 하지만 새로고침을 했을 때는 값이 null로 변경이 된다.
-
+   
  >> 특이점 : show_mgr.js를 btn_mgr.js에 import만 해도 console.log()가 반응을 한다.
-
- 
+   
+* 파일 도식화는 아래 이미지와 같다.
+ <img src="./img/ver.1.JPG" width="450px" height="300px" title="files Diagram" alt=""></img><br/>
