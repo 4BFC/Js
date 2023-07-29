@@ -3,7 +3,7 @@
 그것들을 통해서 클라이언트는 개인이 가지고 있는 값들을 자유롭게 보관하고 계산하는 시스템을
 구축 하는 것이다. 단순한 형태이지만 굉장히 복작하면서도 관리를 하기 편한 structure를 구축하는
 것이 목표다.
-   
+   --------------------------------------------------------------
 # 이 프로젝트의 목표이자 방향성
 * LocalStorage를 통해서 구축하고 나중에는 mySql이나 MongoDB와 같은 dataBase로 data를 구축 한다.
 * Mgr이라는 매니저먼트를 생성해서 값을 주고 받을 수 있는 통합 스크립트를 제작한다.
@@ -15,11 +15,11 @@
 * JS의 Array를 다시 알아보면서 제작하고 적용해 본다.
 * 어떤 API를 사용해볼지 고민해보자
 * HTML다른 HTML include하는 방법 [Link] : https://kay0426.tistory.com/27
-
-
-      
+   
 > 예를 들어서 money라는 값을 지속적으로 get과 set을 통해서 관리가 가능한지 프로그램을 통해서 구축을 해보는 것이다. LocalStorage를 통해서 구축하는 방식과 단순한 변수를 통합적으로 관리하는 Variable_Mgr.js를 통해서 array의 구조를 만들 수 있는 js의 원리를 이해야한다. js의 독특한 array 방식은 기본적으로 우리가 알고 있는 py나 JAVA와는 다른 형태를 띄고 있다. 이의 깊숙한 차이점을 생각하면서 이번 mini project를 통해서 여러 다양한 방식으로 프로그램을 구성하고 제작해본다.
      
+--------------------------------------------------------------
+      
 프로퍼티를 사용해서 get과 set을 제작한다. 하지만 money의 값은 절대적인 값의 유지는 아니다.
 [Link] : https://github.com/4BFC/Js/blob/main/Js/00_getSet/getSet.js
 ```
@@ -38,6 +38,7 @@ export const My_money = {
 }
 ```
     
+    --------------------------------------------------------------
 ## HTML을 분할 시도
 * includeHTML.js를 활용한 분할 시도
 index.html 코드
@@ -90,7 +91,9 @@ function includeHTML(callback) {
 ```
 > include를 사용했을 때는 addEventListener에 null 오류가 지속적으로 발생했다. 뿐만아니라 각 HTML에 사용 할 JS파일들을 index.html파일로 종속시켜야만 했다.
 [LINK] : https://www.w3schools.com/howto/howto_html_include.asp
-  
+    
+    --------------------------------------------------------------
+      
 * <object data="">를 활용한 분할 시도
 ```
 <body>
@@ -120,4 +123,9 @@ function includeHTML(callback) {
  >> 특이점 : show_mgr.js를 btn_mgr.js에 import만 해도 console.log()가 반응을 한다.
    
 * 파일 도식화는 아래 이미지와 같다.
+    
  <img src="./img/ver.1.JPG" width="450px" height="300px" title="files Diagram" alt=""></img><br/>
+   
+* export와 import를 포함한 파일 도식화는 아래 이미지와 같다.
+    
+<img src="./img/ver.1_import_Export.JPG" width="450px" height="300px" title="I/E files Diagram" alt=""></img><br/>
