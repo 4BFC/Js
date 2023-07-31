@@ -1,5 +1,5 @@
  # test에 따른 다이어그램 구도는 아래와 같다.
- <img src="../img/test.JPG" width="800px" height="350px" title="test_files Diagram" alt=""></img><br/>
+ <img src="../img/test.JPG" width="800px" height="250px" title="test_files Diagram" alt=""></img><br/>
 
 # test_2에 따른 다이어그램 구도는 아래와 같다.
  <img src="../img/test_2.JPG" width="700px" height="400px" title="test2_files Diagram" alt=""></img><br/>
