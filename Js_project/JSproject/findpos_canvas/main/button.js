@@ -1,10 +1,11 @@
 //button 동작 구현 script
-import { ran } from "./function.js";
+import { ran } from "./random.js";
+import * as get_id from "./get_id.js"
 
 //get_id
-let btn = document.querySelector('#btn');
-let pos = document.querySelector('#position_value');
-let color = document.querySelector('#color_value');
+// let btn = document.querySelector('#btn');
+// let pos = document.querySelector('#position_value');
+// let color = document.querySelector('#color_value');
 
 //ran_value_ctrl
 let ran_value = () => {
@@ -18,9 +19,9 @@ let ran_value = () => {
 
   // edited text
   //pos_ran_value
-  pos.innerHTML = `position : ${x} : ${y}`;
+  get_id.pos.innerHTML = `position : ${x} : ${y}`;
   //color_ran_value
-  color.innerHTML = `color : ${color_x} : ${color_y}`;
+  get_id.color.innerHTML = `color : ${color_x} : ${color_y}`;
 }
 
 //event함수에서 화살표 함수가 필요하고 필요하지 않은 상황을 명확히 알 필요가 있다.

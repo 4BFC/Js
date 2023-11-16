@@ -1,6 +1,7 @@
 import { ran } from "../random.js";
 import { create_shape_A_type } from "../create_shape.js";
 import { create_shape_B_type } from "../create_shape.js";
+import { shape_delete } from "../create_shape.js";
 
 //create_zone
 //-------------------------------get_id_area
@@ -50,11 +51,13 @@ let ctx = canvas.getContext("2d");
 // }
 
 //--------------------------------------btn_event_area
-btn_1.addEventListener('click', () => { shape_1(20, 40, 50, 50); });
-btn_2.addEventListener('click', shape_2);
-btn_3.addEventListener('click', shape_3);
+// btn_1.addEventListener('click', () => { shape_1(20, 40, 50, 50); });
+// btn_2.addEventListener('click', shape_2);
+// btn_3.addEventListener('click', shape_3);
+
+
 ran_btn.addEventListener('click', () => { create_shape_A_type(ran(480), ran(320), ran(50), ran(50)) });
 
-btn_delete.addEventListener('click', shape_delete)
+btn_delete.addEventListener('click', () => { shape_delete })
 
 //https://developer.mozilla.org/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
