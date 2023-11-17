@@ -18,4 +18,4 @@ ran_btn.addEventListener('click',
   });
 
 btn_delete.addEventListener('click',
-  () => { shape_delete })
+  () => { shape_delete(); console.log("delete") })
