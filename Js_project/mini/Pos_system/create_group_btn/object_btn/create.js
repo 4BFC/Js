@@ -5,7 +5,7 @@ console.log(body)
 const button = document.querySelector('.create')
 let i = 0;
 
-// let btnArray = [...child_btn]
+
 //element.js
 function create_element_btn(parent, i) {
   const child = document.createElement('div')
@@ -29,9 +29,20 @@ button.addEventListener('click',
   () => {
     create_element_btn(body, i)
     i += 1
-    //new_create_btn(body)
     const child_btn = document.querySelectorAll('.child_btn')
     console.log(child_btn)
+    let btnArray = [...child_btn]
+    btnArray.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        console.log(btn.value)
+      })
+    })
+
+
+    // child_btn.addEventListener('click', (e) => {
+    //   console.log(e.target)
+    // })
+
   }
 )
 
