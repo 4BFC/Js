@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Menu 1",
+    "type": "button",
+    "value": "Click me!",
+    "className": "menu-btn",
+    "idName": "menu1",
+    "nameAttr": "menu1"
+  },
+  {
+    "id": 2,
+    "name": "Menu 2",
+    "type": "button",
+    "value": "Click me too!",
+    "className": "menu-btn",
+    "idName": "menu2",
+    "nameAttr": "menu2"
+  },
+  {
+    "id": 3,
+    "name": "Menu 3",
+    "type": "button",
+    "value": "Click me as well!",
+    "className": "menu-btn",
+    "idName": "menu3",
+    "nameAttr": "menu3"
+  },
+  {
+    "id": 4,
+    "name": "Menu 4",
+    "type": "button",
+    "value": "Click me, please!",
+    "className": "menu-btn",
+    "idName": "menu4",
+    "nameAttr": "menu4"
+  },
+  {
+    "id": 5,
+    "name": "Menu 5",
+    "type": "button",
+    "value": "Click me too, please!",
+    "className": "menu-btn",
+    "idName": "menu5",
+    "nameAttr": "menu5"
+  }
+]
