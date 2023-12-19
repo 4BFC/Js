@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "Menu 1",
+    "description": "Menu 1 is ...",
     "type": "button",
     "value": "Click me!",
     "className": "menu-btn",
@@ -11,6 +12,7 @@
   {
     "id": 2,
     "name": "Menu 2",
+    "description": "Menu 2 is ...",
     "type": "button",
     "value": "Click me too!",
     "className": "menu-btn",
@@ -20,6 +22,7 @@
   {
     "id": 3,
     "name": "Menu 3",
+    "description": "Menu 3 is ...",
     "type": "button",
     "value": "Click me as well!",
     "className": "menu-btn",
@@ -29,6 +32,7 @@
   {
     "id": 4,
     "name": "Menu 4",
+    "description": "Menu 4 is ...",
     "type": "button",
     "value": "Click me, please!",
     "className": "menu-btn",
@@ -38,6 +42,7 @@
   {
     "id": 5,
     "name": "Menu 5",
+    "description": "Menu 5 is ...",
     "type": "button",
     "value": "Click me too, please!",
     "className": "menu-btn",
