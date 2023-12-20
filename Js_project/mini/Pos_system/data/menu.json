@@ -3,6 +3,7 @@
     "id": 1,
     "name": "Menu 1",
     "description": "Menu 1 is ...",
+    "image": "https://mcdn.twosome.co.kr/menu_image/P_MA_Z_TSPLC_MENU_REG/1000/1000/PITEM/10100001_01_01_20210611.jpg?width=276&height=276&q=100",
     "price": "3,000",
     "type": "button",
     "value": "Click me!",

@@ -8,4 +8,12 @@ export function ctrl_btn(tag, type, value, className, idName, name) {
   return tag;
 }
 
+export function ctrl_img(tag, src, alt, className, idName, name) {
+  tag.src = src;
+  tag.alt = alt;
+  tag.className = className;
+  tag.idName = idName;
+  tag.name = name;
+}
+
 console.log("import btn_fn.js");
