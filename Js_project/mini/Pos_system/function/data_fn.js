@@ -9,10 +9,15 @@ export function btn_data(data) {
     const menu_btn = get_tag_fn.ctrl_btn(create_input, "button", `${data[i].name}`, "menu_btn", "", "");
     let parent_btn = get_var.menu_btn;
     parent_btn.append(menu_btn);
-
-
     //foreach문을 넣어서 해당 구문을 spread하여 데이터 index에 맞는 값을 value에 대입한다.
   }
+
+  //image
+  const create_img = get_var.create_tag('img'); //이미지 태그를 미리 생성하는 변수
+  console.log(create_img)
+  //이미지 프로퍼트 설정
+
+
   //해당 버튼들을 찾아주는 document가 필요하다.
   const btn_group = document.querySelectorAll('.menu_btn');
   btn_group.forEach((btn, index) => {
@@ -23,15 +28,12 @@ export function btn_data(data) {
       <h2>${data[index].description}</h2> 
       <hr> 
       <h2>${data[index].price}</h2>`
-
-      //image -> 버튼을 여러번 누르면 이미지를 계속해서 생성하고 이미지가 늘어난다. 따라서 다른 방법을 고안해 봐야한다.
-      const create_img = get_var.create_tag('img');
-      console.log(create_img)
       get_tag_fn.ctrl_img(create_img, `${data[index].image}`, "", "menu-img", "menu1-img", "");
-      let parent_img = get_var.menu_img;
-      parent_img.append(create_img);
     })
   })
+
+  let parent_img = get_var.menu_img;
+  parent_img.append(create_img);
 }
 
 console.log("import data_fn.js");
