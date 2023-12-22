@@ -9,10 +9,35 @@
 
 <body>
   <h1>TowSomePlace</h1>
-  <div class="Menu_btn"></div>
-  <div class="Menu_img"></div>
-  <div class="view_port"></div>
-  <script type="module" src="./main.js"></script>
+
+  <div class="nav_bar">
+    <a href="./index.html">HOME</a>
+    <form action="#create">
+      <input type="button" value="NEW Menu">
+    </form>
+    <button class="hidden_test">hidden</button>
+  </div>
+
+  <div class="show_menu">
+    <div class="Menu_btn"></div>
+    <div class="Menu_img"></div>
+    <div class="view_port"></div>
+    <script type="module" src="./main.js"></script>
+    <div>
+      <form action="#">
+        <input type="button" value="결제">
+      </form>
+    </div>
+  </div>
+
+  <div class="create_menu">
+    <form action="#">
+      <input type="text" class="menu_name">
+      <input type="text" class="menu_description">
+      <input type="button" value="submit" class="menu_submit">
+    </form>
+  </div>
+
 </body>
 
 </html>

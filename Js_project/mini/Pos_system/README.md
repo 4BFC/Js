@@ -13,6 +13,8 @@
 
 - [ ] 결제 시스템
 
+- [ ] json 파일 MySQL과 연동
+
   
 
 # Document
