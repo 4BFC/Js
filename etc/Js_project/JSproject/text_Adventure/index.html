@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>main</title>
+  <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body>
+  <h1>Adventure</h1>
+  <hr>
+  <div id="bgImg">
+
+    <img id="rain" src="https://i.pinimg.com/originals/74/88/ab/7488abee3d4ff789e7bd30e66679ccf9.png" alt="">
+  </div>
+  <hr>
+  <h2>
+    <div id="clock">00:00:00</div>
+  </h2>
+  <div>
+    <div id="weather">
+      <span></span>
+      <span></span>
+    </div>
+
+    <div>
+      <a id="dice"> Dice : - </a>
+      <button id="dic_btn">Click!</button>
+    </div>
+
+    <div>
+      <div id="time">Time : </div>
+      <div id="hp">HP : 100</div>
+      <div id="power">POW : 10</div>
+      <div id="age">Age : 0</div>
+      <div id="money">Money : 10c</div>
+      <div id="day">Day : 1</div>
+    </div>
+  </div>
+
+
+  <br>
+  <hr> <br>
+  <!-- 
+  <a>
+    <button id="atk">공격</button>
+    <button id="run">도망</button>
+  </a> -->
+
+  <a>
+    <div>**상점**</div>
+    <a id="price">가격 : __c</a>
+    <a id="item">아이템 : __</a>
+
+    <div>
+      <button id="buy">구매</button>
+      <div id="buyMsg"></div>
+      <!-- <button id="sale">판매</button> -->
+    </div>
+  </a>
+  <br>
+  <div>일하기
+    <div id="work">노동력 : 1</div>
+    <div id="WorkTm">
+      NOT YET!!
+    </div>
+  </div>
+
+  <br>
+  <hr>
+  <div>
+    <div id="quest">퀘스트</div>
+  </div>
+  <br>
+
+</body>
+<script type="module" src="./Js/update.js"></script>
+<script type="module" src="./Js/function.js"></script>
+<script src="./Js/weather.js"></script>
+<script type="module" src="./Js/bank.js"></script>
+<script src="./Js/unUsed/clock.js"></script>
+
+</html>
